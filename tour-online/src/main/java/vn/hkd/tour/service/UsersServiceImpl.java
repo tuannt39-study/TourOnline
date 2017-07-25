@@ -3,8 +3,8 @@ package vn.hkd.tour.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import vn.hkd.touronline.model.Users;
-import vn.hkd.touronline.repository.UsersRepository;
+import vn.hkd.tour.model.Users;
+import vn.hkd.tour.repository.UsersRepository;
 
 import java.util.List;
 

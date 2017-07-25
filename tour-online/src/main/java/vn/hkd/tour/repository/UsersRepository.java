@@ -2,7 +2,7 @@ package vn.hkd.tour.repository;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import vn.hkd.touronline.model.Users;
+import vn.hkd.tour.model.Users;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package vn.hkd.tour.service;
 
-import vn.hkd.touronline.model.Roles;
+import vn.hkd.tour.model.Roles;
 
 public interface RolesService {
 

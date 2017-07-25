@@ -8,22 +8,22 @@ public class MainController {
 
     @GetMapping("/")
     public String index() {
-        return "index";
+        return "users/index";
     }
 
     @GetMapping("/admin")
     public String admin() {
-        return "home";
+        return "admin/home";
     }
 
     @GetMapping("/403")
     public String accessDenied() {
-        return "403";
+        return "layout/403";
     }
 
     @GetMapping("/login")
     public String getLogin() {
-        return "dangnhap";
+        return "users/dangnhap";
     }
 
 //     @GetMapping("/logout")

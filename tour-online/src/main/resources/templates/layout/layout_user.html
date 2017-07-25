@@ -1,90 +1,255 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="head">
-    <meta charset="utf-8">
+<head th:fragment="headuser">
+    <meta charset="utf-8" />
     <title>Hackademics Hà Nội</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="" name="description">
-    <meta content="" name="author">
-    <link href="../../static/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="../../static/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
-    <link href="../../static/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="../../static/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../static/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
-    <link href="../../static/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css"/>
-    <link href="../../static/assets/admin/pages/css/profile.css" rel="stylesheet" type="text/css"/>
-    <link href="../../static/assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
-    <link href="../../static/assets/global/css/components.css" rel="stylesheet" type="text/css">
-    <link href="../../static/assets/global/css/plugins.css" rel="stylesheet" type="text/css">
-    <link href="../../static/assets/admin/layout3/css/layout.css" rel="stylesheet" type="text/css">
-    <link href="../../static/assets/admin/layout3/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color">
-    <link href="../../static/assets/admin/layout3/css/custom.css" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" href="../../static/assets/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="../../static/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" th:href="@{/assets/global/plugins/font-awesome/css/font-awesome.min.css}" />
+    <link href="../../static/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" th:href="@{/assets/global/plugins/bootstrap/css/bootstrap.min.css}" />
+    <link href="../../static/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" th:href="@{/assets/global/plugins/uniform/css/uniform.default.css}" />
+    <link href="../../static/assets/global/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet" th:href="@{/assets/global/plugins/fancybox/source/jquery.fancybox.css}" />
+    <link href="../../static/assets/global/plugins/carousel-owl-carousel/owl-carousel/owl.carousel.css" rel="stylesheet" th:href="@{/assets/global/plugins/carousel-owl-carousel/owl-carousel/owl.carousel.css}" />
+    <link href="../../static/assets/global/plugins/slider-layer-slider/css/layerslider.css" rel="stylesheet" th:href="@{/assets/global/plugins/slider-layer-slider/css/layerslider.css}" />
+    <link href="../../static/assets/global/plugins/slider-revolution-slider/rs-plugin/css/settings.css" rel="stylesheet" th:href="@{/assets/global/plugins/slider-revolution-slider/rs-plugin/css/settings.css}" />
+    <link href="../../static/assets/global/plugins/rateit/src/rateit.css" rel="stylesheet" type="text/css" th:href="@{/assets/global/plugins/rateit/src/rateit.css}" />
+    <link href="../../static/assets/global/css/components.css" rel="stylesheet" th:href="@{/assets/global/css/components.css}" />
+    <link href="../../static/assets/frontend/layout/css/style.css" rel="stylesheet" th:href="@{/assets/frontend/layout/css/style.css}" />
+    <link href="../../static/assets/frontend/pages/css/style-shop.css" rel="stylesheet" type="text/css" th:href="@{/assets/frontend/pages/css/style-shop.css}" />
+    <link href="../../static/assets/frontend/pages/css/style-layer-slider.css" rel="stylesheet" th:href="@{/assets/frontend/pages/css/style-layer-slider.css}" />
+    <link href="../../static/assets/frontend/pages/css/style-revolution-slider.css" rel="stylesheet" th:href="@{/assets/frontend/pages/css/style-revolution-slider.css}" />
+    <link href="../../static/assets/frontend/layout/css/style-responsive.css" rel="stylesheet" th:href="@{/assets/frontend/layout/css/style-responsive.css}" />
+    <link href="../../static/assets/frontend/layout/css/themes/red.css" rel="stylesheet" id="style-color" th:href="@{/assets/frontend/layout/css/themes/red.css}" />
+    <link href="../../static/assets/frontend/layout/css/jquery-ui.css" rel="stylesheet" th:href="@{/assets/frontend/layout/css/jquery-ui.css}" />
+    <link href="../../static/assets/frontend/layout/css/custom.css" rel="stylesheet" th:href="@{/assets/frontend/layout/css/custom.css}" />
+    <link rel="shortcut icon" href="../../static/assets/favicon.ico" th:href="@{/assets/favicon.ico}" />
+    <script src="../../static/assets/global/plugins/jquery.min.js" type="text/javascript" th:src="@{/assets/global/plugins/jquery.min.js}"></script>
+    <script src="../../static/assets/global/plugins/jquery-migrate.min.js" type="text/javascript" th:src="@{/assets/global/plugins/jquery-migrate.min.js}"></script>
+    <script src="../../static/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript" th:src="@{/assets/global/plugins/uniform/jquery.uniform.min.js}"></script>
+    <script src="../../static/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" th:src="@{/assets/global/plugins/bootstrap/js/bootstrap.min.js}"></script>
+    <script src="../../static/assets/frontend/layout/scripts/back-to-top.js" type="text/javascript" th:src="@{/assets/frontend/layout/scripts/back-to-top.js}"></script>
+    <script src="../../static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript" th:src="@{/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js}"></script>
+    <script src="../../static/assets/global/plugins/fancybox/source/jquery.fancybox.pack.js" type="text/javascript" th:src="@{/assets/global/plugins/fancybox/source/jquery.fancybox.pack.js}"></script>
+    <script src="../../static/assets/global/plugins/carousel-owl-carousel/owl-carousel/owl.carousel.min.js" type="text/javascript" th:src="@{/assets/global/plugins/carousel-owl-carousel/owl-carousel/owl.carousel.min.js}"></script>
+    <script src="../../static/assets/global/plugins/zoom/jquery.zoom.min.js" type="text/javascript" th:src="@{/assets/global/plugins/zoom/jquery.zoom.min.js}"></script>
+    <script src="../../static/assets/global/plugins/bootstrap-touchspin/bootstrap.touchspin.js" type="text/javascript" th:src="@{/assets/global/plugins/bootstrap-touchspin/bootstrap.touchspin.js}"></script>
+    <script src="../../static/assets/global/plugins/slider-layer-slider/js/greensock.js" type="text/javascript" th:src="@{/assets/global/plugins/slider-layer-slider/js/greensock.js}"></script>
+    <script src="../../static/assets/global/plugins/slider-layer-slider/js/layerslider.transitions.js" type="text/javascript" th:src="@{/assets/global/plugins/slider-layer-slider/js/layerslider.transitions.js}"></script>
+    <script src="../../static/assets/global/plugins/slider-layer-slider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript" th:src="@{/assets/global/plugins/slider-layer-slider/js/layerslider.kreaturamedia.jquery.js}"></script>
+    <script src="../../static/assets/frontend/pages/scripts/layerslider-init.js" type="text/javascript" th:src="@{/assets/frontend/pages/scripts/layerslider-init.js}"></script>
+    <script src="../../static/assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js" type="text/javascript" th:src="@{/assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js}"></script>
+    <script src="../../static/assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js" type="text/javascript" th:src="@{/assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js}"></script>
+    <script src="../../static/assets/frontend/pages/scripts/revo-slider-init.js" type="text/javascript" th:src="@{/assets/frontend/pages/scripts/revo-slider-init.js}"></script>
+    <script src="../../static/assets/global/plugins/gmaps/gmaps.min.js" type="text/javascript" th:src="@{/assets/global/plugins/gmaps/gmaps.min.js}"></script>
+    <script src="../../static/assets/global/plugins/gmaps/gmaps.js" type="text/javascript" th:src="@{/assets/global/plugins/gmaps/gmaps.js}"></script>
+    <script src="../../static/assets/frontend/pages/scripts/contact-us.js" type="text/javascript" th:src="@{/assets/frontend/pages/scripts/contact-us.js}"></script>
+    <script src="../../static/assets/frontend/layout/scripts/mapapi.js" type="text/javascript" th:src="@{/assets/frontend/layout/scripts/mapapi.js}"></script>
+    <script src="../../static/assets/frontend/layout/scripts/layout.js" type="text/javascript" th:src="@{/assets/frontend/layout/scripts/layout.js}"></script>
 </head>
-<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-md">
-<div class="page-wrapper">
-    <div th:fragment="header" class="page-header navbar navbar-fixed-top">
-        <!-- BEGIN HEADER INNER -->
-        <div class="page-header-inner ">
-            <!-- BEGIN LOGO -->
-            <div class="page-logo">
-                <a th:href="@{/contact}"><img src="../static/img/logo.png" th:src="@{/img/logo.png}" alt="logo" class="logo-default"/> </a>
-            </div>
-            <!-- END LOGO -->
-            <!-- BEGIN TOP NAVIGATION MENU -->
-            <div class="top-menu">
-                <ul class="nav navbar-nav pull-right">
-                    <!-- BEGIN USER LOGIN DROPDOWN -->
-                    <li class="dropdown dropdown-user">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                           data-close-others="true">
-                            <span class="username username-hide-on-mobile"> Tuân </span>
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-default">
-                            <li>
-                                <a href="#">Cá nhân </a>
-                            </li>
-                            <li>
-                                <a href="#">Thoát </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- END USER LOGIN DROPDOWN -->
+<body class="corporate">
+<!-- BEGIN TOP BAR -->
+    <div th:fragment="preheaderuser" class="pre-header">
+        <div class="container">
+            <div class="row">
+            <!-- BEGIN TOP BAR LEFT PART -->
+            <div class="col-md-6 col-sm-6 additional-shop-info">
+                <ul class="list-unstyled list-inline">
+                <li><i class="fa fa-phone"></i><span>(+84) 111 111 1111</span></li>
+                <li><i class="fa fa-envelope-o"></i><span>info@hackademics.vn</span></li>
                 </ul>
             </div>
-            <!-- END TOP NAVIGATION MENU -->
-        </div>
-        <!-- END HEADER INNER -->
+            <!-- END TOP BAR LEFT PART -->
+            <!-- BEGIN TOP BAR MENU -->
+            <div class="col-md-6 col-sm-6 additional-nav">
+                <ul class="list-unstyled list-inline pull-right">
+                <li><a href="dangnhap.html">Đăng nhập</a></li>
+                <li><a href="dangky.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <!-- END TOP BAR MENU -->
+            </div>
+        </div>        
     </div>
-    <!-- END HEADER -->
-    <!-- BEGIN HEADER & CONTENT DIVIDER -->
-    <div class="clearfix"></div>
-    <!-- END HEADER & CONTENT DIVIDER -->
+    <!-- END TOP BAR -->
+    <!-- BEGIN HEADER -->
+    <div th:fragment="headeruser" class="header">
+        <div class="container">
+            <a class="site-logo" href="#"><img src="../../static/assets/frontend/layout/img/logos/logo-kv.jpg" alt="Metronic FrontEnd" th:src="@{/assets/frontend/layout/img/logos/logo-kv.jpg}" /></a>
+            <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
+            <!-- BEGIN NAVIGATION -->
+            <div class="header-navigation pull-right font-transform-inherit">
+            <ul>
+                <li >
+                <a  href="index.html">
+                    Trang chủ 
+                </a>
+                </li>
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
+                    Trong nước
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                    <a href="#">Miền bắc<i class="fa fa-angle-right"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="chitiet.html">Hạ Long</a></li>
+                        <li><a href="chitiet.html">Sapa</a></li>
+                        <li><a href="chitiet.html">Hà Nội</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                    <a href="#">Miền trung<i class="fa fa-angle-right"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="chitiet.html">Đà nẵng</a></li>
+                        <li><a href="chitiet.html">Nha Trang</a></li>
+                        <li><a href="chitiet.html">Đà Lạt</a></li>
+                        <li><a href="chitiet.html">Hội An</a></li>
+                        <li><a href="chitiet.html">Huế</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                    <a href="#">Miền nam<i class="fa fa-angle-right"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="chitiet.html">Hồ Chí Minh</a></li>
+                        <li><a href="chitiet.html">Côn Đảo</a></li>
+                    </ul>
+                    </li>       
+                </ul>
+                </li>
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">
+                    Quốc Tế
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                    <a href="chitiet.html">Đông Nam Á</a>
+                    </li>
 
-    <div class="page-container">
-        <div th:fragment="sidebar" class="page-sidebar-wrapper">
-            <!-- BEGIN SIDEBAR -->
-            <div class="page-sidebar navbar-collapse collapse">
-                <!-- BEGIN SIDEBAR MENU -->
-                <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link nav-toggle">
-                            <span class="title">Contact</span>
-                            <span class="selected"></span>
-                        </a>
+                    <li class="dropdown-submenu">
+                    <a href="chitiet.html">Châu Á</a>
+                    </li>
+                    <li class="dropdown-submenu">
+                    <a href="chitiet.html">Châu Âu</a>
                     </li>
                 </ul>
-                <!-- END SIDEBAR MENU -->
+                </li>
+                <li >
+                <a  href="lienhe.html">
+                    Liên hệ 
+                </a>
+                </li>
+                <!-- BEGIN TOP SEARCH -->
+                <li class="menu-search">
+                <span class="sep"></span>
+                <i class="fa fa-search search-btn"></i>
+                <div class="search-box">
+                    <form action="#">
+                    <div class="input-group">
+                        <input type="text" placeholder="Search" class="form-control" />
+                        <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                        </span>
+                    </div>
+                    </form>
+                </div> 
+                </li>
+                <!-- END TOP SEARCH -->
+            </ul>
             </div>
-            <!-- END SIDEBAR -->
+            <!-- END NAVIGATION -->
         </div>
     </div>
-
-    <div th:fragment="footer" class="page-footer">
-        <div class="page-footer-inner"> 2017 &copy; Hackademics Hà Nội</div>
+    <!-- Header END -->
+    <!-- BEGIN PRE-FOOTER -->
+    <div th:fragment="prefooteruser" class="pre-footer">
+        <div class="container">
+            <div class="row">
+                <!-- BEGIN BOTTOM ABOUT BLOCK -->
+                <div class="col-md-4 col-sm-6 pre-footer-col">
+                    <h2>Trong nước</h2>
+                    <address class="margin-bottom-40">
+                        <a href="#">Hạ Long</a> <br />
+                        <a href="#">Sapa</a> <br />
+                        <a href="#">Hà Nội</a> <br />
+                        <a href="#">Đà nẵng</a> <br />
+                        <a href="#">Nha Trang</a> <br />
+                        <a href="#">Đà Lạt</a> <br />
+                        <a href="#">Hội An</a> <br />
+                        <a href="#">Huế</a> <br />
+                        <a href="#">Hồ Chí Minh</a> <br />
+                        <a href="#">Côn Đảo</a> <br />
+                    </address>
+                </div>
+                <!-- END BOTTOM ABOUT BLOCK -->
+                <!-- BEGIN BOTTOM ABOUT BLOCK -->
+                <div class="col-md-4 col-sm-6 pre-footer-col">
+                    <h2>Quốc Tế</h2>
+                    <address class="margin-bottom-40">
+                        <a href="#">Campuchia</a> <br />
+                        <a href="#">Singapore</a> <br />
+                        <a href="#">Thái lan</a> <br />
+                        <a href="#">Nhật Bản</a> <br />
+                        <a href="#">Hàn Quốc</a> <br />
+                        <a href="#">Pháp</a> <br />
+                        <a href="#">Nga</a> <br />
+                        <a href="#">Đức</a> <br />
+                    </address>
+                </div>
+                <!-- END BOTTOM ABOUT BLOCK -->
+                <!-- BEGIN BOTTOM CONTACTS -->
+                <div class="col-md-4 col-sm-6 pre-footer-col">
+                    <h2>Liên Hệ</h2>
+                    <address class="margin-bottom-40">
+                        23 Tô Vĩnh Diện, Khương Trung <br />
+                        Thanh Xuân, Hà Nội <br />
+                        Điện thoại: (+84) 111 111 1111 <br />
+                        Fax: 300 323 1456 <br />
+                        Email: <a href="mailto:info@hackademics.vn">info@hackademics.vn</a> <br />
+                        Skype: <a href="skype:hackademics">hackademics</a>
+                    </address>
+                    <div class="pre-footer-subscribe-box pre-footer-subscribe-box-vertical">
+                        <h2>Đăng ký nhận tin</h2>
+                        <p></p>
+                        <form action="#">
+                            <div class="input-group">
+                                <input type="text" placeholder="email của bạn@gmail.com" class="form-control" />
+                                <span class="input-group-btn">
+                                <button class="btn btn-primary" type="submit">Đăng ký</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- END BOTTOM CONTACTS -->
+            </div>
+        </div>
     </div>
-</div>
+    <!-- END PRE-FOOTER -->
+
+    <!-- BEGIN FOOTER -->
+    <div th:fragment="footeruser" class="footer">
+        <div class="container">
+        <div class="row">
+            <!-- BEGIN COPYRIGHT -->
+            <div class="col-md-6 col-sm-6 padding-top-10">
+            2017 © Hackademics Hà Nội.
+            </div>
+            <!-- END COPYRIGHT -->
+            <!-- BEGIN PAYMENTS -->
+            <div class="col-md-6 col-sm-6">
+            <ul class="social-footer list-unstyled list-inline pull-right">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>  
+            </div>
+            <!-- END PAYMENTS -->
+        </div>
+        </div>
+    </div>
+    <!-- END FOOTER -->
 </body>
+<!-- END BODY -->
 </html>
