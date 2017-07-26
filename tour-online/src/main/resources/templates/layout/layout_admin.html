@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="headadmin">
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Hackademics Hà Nội</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -61,11 +61,11 @@
                 <div class="page-logo">
                     <a href="#"><img src="../../static/assets/admin/layout3/img/logo-default.png" alt="logo" class="logo-default" th:src="@{/assets/admin/layout3/img/logo-default.png}" /></a>
                 </div>
-                <a href="javascript:;" class="menu-toggler"></a>
+                <a href="#" class="menu-toggler"></a>
                 <div class="top-menu">
                     <ul class="nav navbar-nav pull-right">
                         <li class="dropdown dropdown-user dropdown-dark">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                 <img alt="" class="img-circle" src="../../static/assets/admin/layout3/img/avatar9.jpg" th:src="@{/assets/admin/layout3/img/avatar9.jpg}" />
                                 <span class="username username-hide-mobile">Nguyễn Thế Tuân</span>
                             </a>
@@ -89,22 +89,22 @@
                 <div class="hor-menu ">
                     <ul class="nav navbar-nav">
                         <li class="menu-dropdown">
-                            <a href="home.html">Trang chủ</a>
+                            <a href="/admin/trang-chu">Trang chủ</a>
                         </li>
                         <li class="menu-dropdown">
-                            <a href="account.html">Tài khoản </a>
+                            <a href="/admin/tai-khoan">Tài khoản </a>
                         </li>
                         <li class="menu-dropdown">
-                            <a href="tour.html">Tour </a>
+                            <a href="/admin/tour">Tour </a>
                         </li>
                         <li class="menu-dropdown">
-                            <a href="booking.html">Booking Tour </a>
+                            <a href="/admin/dat-tour">Booking Tour </a>
                         </li>
                         <li class="menu-dropdown">
-                            <a href="hdv.html">Hướng dẫn viên </a>
+                            <a href="/admin/huong-dan-vien">Hướng dẫn viên </a>
                         </li>
                         <li class="menu-dropdown">
-                            <a href="contact.html">Liên hệ </a>
+                            <a href="/admin/lien-he">Liên hệ </a>
                         </li>
                     </ul>
                 </div>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout_user :: headuser"></head>
+<head th:replace="layout/layout_user :: headuser"></head>
 <body class="corporate">
-	<div th:replace="layout_user :: preheaderuser" class="pre-header"></div>
-	<div th:replace="layout_user :: headeruser" class="header"></div>
+	<div th:replace="layout/layout_user :: preheaderuser" class="pre-header"></div>
+	<div th:replace="layout/layout_user :: headeruser" class="header"></div>
 	<div class="main">
 		<div class="container">
         <ul class="breadcrumb">
-            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="/">Trang chủ</a></li>
             <li><a href="#">Tour trong nước</a></li>
             <li class="active">Vinh - Con Cuông - Vườn Quốc Gia Pù Mát - Động Thiên Đường - Bà Nà - Hội An - Đà Nẵng</li>
         </ul>
@@ -105,12 +105,12 @@
 									<form role="form">
 										<div class="form-group">
 											<label>Tên</label>
-											<input class="form-control" type="text">
+											<input class="form-control" type="text"/>
 										</div>
 
 										<div class="form-group">
 											<label>Email <span class="color-red">*</span></label>
-											<input class="form-control" type="text">
+											<input class="form-control" type="text"/>
 										</div>
 
 										<div class="form-group">
@@ -130,7 +130,6 @@
 											<div style="font-weight: bold; font-size: 16px; margin-bottom: 10px; line-height: 22px;">
 												<h1 itemprop="name">Vinh - Con Cuông - Vườn Quốc Gia Pù Mát - Động Thiên Đường - Bà Nà - Hội An - Đà Nẵng</h1>
 												<span itemprop="brand" style="display: none;">Vietravel</span>
-												<img itemprop="image" style="display: none;" src="https://travel.com.vn/Images/destination/tf_170620011352_685896.jpg" alt="Vinh - Con Cuông - Vườn Quốc Gia Pù Mát - Động Thiên Đường - Bà Nà - Hội An - Đà Nẵng" />
 											</div>
 											<div>
 												<div style="float:left;padding-top:5px;" data-tourid="7e0b7e36-bb4e-468f-8ba7-72503ccfa238" class="rateit" data-rateit-value="4.68" data-rateit-resetable="false"></div>
@@ -158,7 +157,7 @@
                       <strong><span>$</span>47.00</strong>
                       <em>$<span>62.00</span></em>
 										</div>
-										<a href="index.html"><button class="btn btn-primary" type="submit" style="margin-left: 30px;">Đặt tour</button></a>
+										<a href="/"><button class="btn btn-primary" type="submit" style="margin-left: 30px;">Đặt tour</button></a>
                   </div>
 								</div>
 							</div>
@@ -267,8 +266,8 @@
 										</div>
 									</div>
 								</div>
-								<div th:replace="layout_user :: prefooteruser" class="pre-footer"></div>
-								<div th:replace="layout_user :: footeruser" class="footer"></div>
+								<div th:replace="layout/layout_user :: prefooteruser" class="pre-footer"></div>
+								<div th:replace="layout/layout_user :: footeruser" class="footer"></div>
     <script type="text/javascript">
         jQuery(document).ready(function() {
             Layout.init();    

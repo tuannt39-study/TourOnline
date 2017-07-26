@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout_user :: headuser"></head>
+<head th:replace="layout/layout_user :: headuser"></head>
 <body class="corporate">
-	<div th:replace="layout_user :: preheaderuser" class="pre-header"></div>
-	<div th:replace="layout_user :: headeruser" class="header"></div>
+	<div th:replace="layout/layout_user :: preheaderuser" class="pre-header"></div>
+	<div th:replace="layout/layout_user :: headeruser" class="header"></div>
     <div class="main">
       <div class="container">
         <ul class="breadcrumb">
-            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="/">Trang chủ</a></li>
             <li><a href="#">Bài viết</a></li>
             <li class="active">Giới thiệu</li>
         </ul>
@@ -81,8 +81,8 @@
         <!-- END SIDEBAR & CONTENT -->
       </div>
     </div>
-<div th:replace="layout_user :: prefooteruser" class="pre-footer"></div>
-								<div th:replace="layout_user :: footeruser" class="footer"></div>
+<div th:replace="layout/layout_user :: prefooteruser" class="pre-footer"></div>
+								<div th:replace="layout/layout_user :: footeruser" class="footer"></div>
     <script type="text/javascript">
         jQuery(document).ready(function() {
             Layout.init();    

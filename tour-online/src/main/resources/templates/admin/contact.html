@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout_admin :: headadmin"></head>
+<head th:replace="layout/layout_admin :: headadmin"></head>
 <body>
-<div th:replace="layout_admin :: headeradmin" class="page-header"></div>
+<div th:replace="layout/layout_admin :: headeradmin" class="page-header"></div>
 <div class="page-container">
 	<div class="page-head">
 		<div class="container">
@@ -15,7 +15,7 @@
 		<div class="container">
 			<ul class="page-breadcrumb breadcrumb">
 				<li>
-					<a href="./home.html">Trang chủ</a><i class="fa fa-circle"></i>
+					<a href="/admin/trang-chu">Trang chủ</a><i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
 					 Liên hệ
@@ -34,7 +34,7 @@
 											<span class="caption-subject font-blue-madison bold uppercase">Thông tin</span>
 										</div>
 										<div style="float: right;">
-											<a href="./hdv_edit.html" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+											<a href="/admin/huong-dan-vien" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 										</div>
 									</div>
 									<div class="portlet-body">
@@ -81,7 +81,7 @@
 											<span class="caption-subject font-blue-madison bold uppercase">Địa điểm</span>
 										</div>
 										<div style="float: right;">
-											<a href="./hdv_edit.html" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+											<a href="/admin/huong-dan-vien" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 										</div>
 									</div>
 									<div class="portlet-body">
@@ -134,8 +134,8 @@
         </div>
 	</div>
 </div>
-<div th:replace="layout_admin :: footeradmin" class="page-footer"></div>
-<div th:replace="layout_admin :: topadmin" class="scroll-to-top"></div>
+<div th:replace="layout/layout_admin :: footeradmin" class="page-footer"></div>
+<div th:replace="layout/layout_admin :: topadmin" class="scroll-to-top"></div>
 <script>
 jQuery(document).ready(function() {       
    Metronic.init();

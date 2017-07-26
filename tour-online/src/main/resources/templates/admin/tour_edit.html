@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout_admin :: headadmin"></head>
+<head th:replace="layout/layout_admin :: headadmin"></head>
 <body>
-<div th:replace="layout_admin :: headeradmin" class="page-header"></div>
+<div th:replace="layout/layout_admin :: headeradmin" class="page-header"></div>
 <div class="page-container">
 	<div class="page-head">
 		<div class="container">
@@ -15,10 +15,10 @@
 		<div class="container">
 			<ul class="page-breadcrumb breadcrumb">
 				<li>
-					<a href="./home.html">Trang chủ</a><i class="fa fa-circle"></i>
+					<a href="/admin/trang-chu">Trang chủ</a><i class="fa fa-circle"></i>
 				</li>
 				<li>
-					<a href="./tour.html">Tour</a><i class="fa fa-circle"></i>
+					<a href="/admin/tour">Tour</a><i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
 					 Tên Tour
@@ -45,25 +45,25 @@
 														<div class="form-group">
 															<label class="col-md-5 control-label">Thời gian</label>
 															<div class="col-md-7">
-																<input type="text" class="form-control input-circle" placeholder="Thời gian">
+																<input type="text" class="form-control input-circle" placeholder="Thời gian"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-5 control-label">Dịch vụ</label>
 															<div class="col-md-7">
-																<input type="text" class="form-control input-circle" placeholder="Dịch vụ">
+																<input type="text" class="form-control input-circle" placeholder="Dịch vụ"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-5 control-label">Giá Tour</label>
 															<div class="col-md-7">
-																<input type="text" class="form-control input-circle" placeholder="Giá">
+																<input type="text" class="form-control input-circle" placeholder="Giá"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-5 control-label">Giá khuyến mãi</label>
 															<div class="col-md-7">
-																<input type="text" class="form-control input-circle" placeholder="Giá khuyến mãi">
+																<input type="text" class="form-control input-circle" placeholder="Giá khuyến mãi"/>
 															</div>
 														</div>
 													</div>
@@ -89,19 +89,19 @@
 														<div class="form-group">
 															<label class="col-md-3 control-label">Tên Tour</label>
 															<div class="col-md-8">
-																<input type="text" class="form-control input-circle" placeholder="Tên Tour">
+																<input type="text" class="form-control input-circle" placeholder="Tên Tour"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-3 control-label">Ảnh tour</label>
 															<div class="col-md-6">
-																<input type="text" class="form-control input-circle" placeholder="Ảnh tour">
+																<input type="text" class="form-control input-circle" placeholder="Ảnh tour"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-3 control-label">Nơi khởi hành</label>
 															<div class="col-md-4">
-																<input type="text" class="form-control input-circle" placeholder="Nơi khởi hành">
+																<input type="text" class="form-control input-circle" placeholder="Nơi khởi hành"/>
 															</div>
 														</div>
 														<div class="form-group">
@@ -117,7 +117,7 @@
 														<div class="form-actions">
 															<div class="row">
 																<div class="col-md-offset-3 col-md-9">
-																	<button formaction="./tour.html" class="btn btn-circle blue">Xác nhận</button>
+																	<button formaction="/admin/tour" class="btn btn-circle blue">Xác nhận</button>
 																	<button class="btn btn-circle default">Hủy</button>
 																</div>
 															</div>
@@ -219,8 +219,8 @@
         </div>
 	</div>
 </div>
-<div th:replace="layout_admin :: footeradmin" class="page-footer"></div>
-<div th:replace="layout_admin :: topadmin" class="scroll-to-top"></div>
+<div th:replace="layout/layout_admin :: footeradmin" class="page-footer"></div>
+<div th:replace="layout/layout_admin :: topadmin" class="scroll-to-top"></div>
 <script>
 jQuery(document).ready(function() {       
    Metronic.init();

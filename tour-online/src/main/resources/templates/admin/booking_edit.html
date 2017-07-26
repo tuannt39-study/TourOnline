@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout_admin :: headadmin"></head>
+<head th:replace="layout/layout_admin :: headadmin"></head>
 <body>
-<div th:replace="layout_admin :: headeradmin" class="page-header"></div>
+<div th:replace="layout/layout_admin :: headeradmin" class="page-header"></div>
 <div class="page-container">
 	<div class="page-head">
 		<div class="container">
@@ -15,10 +15,10 @@
 		<div class="container">
 			<ul class="page-breadcrumb breadcrumb">
 				<li>
-					<a href="./home.html">Trang chủ</a><i class="fa fa-circle"></i>
+					<a href="/admin/trang-chu">Trang chủ</a><i class="fa fa-circle"></i>
 				</li>
 				<li>
-					 <a href="./booking.html">Booking Tour</a><i class="fa fa-circle"></i>
+					 <a href="/admin/dat-tour">Booking Tour</a><i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
 					 Booking Tour
@@ -46,25 +46,25 @@
 														<div class="form-group">
 															<label class="col-md-3 control-label">Họ tên</label>
 															<div class="col-md-5">
-																<input type="text" class="form-control input-circle" placeholder="Họ tên">
+																<input type="text" class="form-control input-circle" placeholder="Họ tên"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-3 control-label">Email</label>
 															<div class="col-md-5">
-																<input type="text" class="form-control input-circle" placeholder="Email">
+																<input type="text" class="form-control input-circle" placeholder="Email"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-3 control-label">Số điện thoại</label>
 															<div class="col-md-5">
-																<input type="text" class="form-control input-circle" placeholder="Số điện thoại">
+																<input type="text" class="form-control input-circle" placeholder="Số điện thoại"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-3 control-label">Địa chỉ</label>
 															<div class="col-md-5">
-																<input type="text" class="form-control input-circle" placeholder="Địa chỉ">
+																<input type="text" class="form-control input-circle" placeholder="Địa chỉ"/>
 															</div>
 														</div>
 														<div class="form-group">
@@ -96,37 +96,37 @@
 														<div class="form-group">
 															<label class="col-md-3 control-label">Tên Tour</label>
 															<div class="col-md-8">
-																<input type="text" class="form-control input-circle" placeholder="Tên Tour">
+																<input type="text" class="form-control input-circle" placeholder="Tên Tour"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-3 control-label">Ngày khởi hành</label>
 															<div class="col-md-5">
-																<input type="text" class="form-control input-circle" placeholder="Ngày khởi hành">
+																<input type="text" class="form-control input-circle" placeholder="Ngày khởi hành"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-3 control-label">Người lớn (>12)</label>
 															<div class="col-md-5">
-																<input type="text" class="form-control input-circle" placeholder="Người lớn">
+																<input type="text" class="form-control input-circle" placeholder="Người lớn"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-3 control-label">Trẻ em (5 - 12)</label>
 															<div class="col-md-5">
-																<input type="text" class="form-control input-circle" placeholder="Trẻ em">
+																<input type="text" class="form-control input-circle" placeholder="Trẻ em"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-3 control-label">Trẻ nhỏ (2 - 5)</label>
 															<div class="col-md-5">
-																<input type="text" class="form-control input-circle" placeholder="Trẻ nhỏ">
+																<input type="text" class="form-control input-circle" placeholder="Trẻ nhỏ"/>
 															</div>
 														</div>
 														<div class="form-group">
 															<label class="col-md-3 control-label">Em bé (<2)</label>
 															<div class="col-md-5">
-																<input type="text" class="form-control input-circle" placeholder="Em bé">
+																<input type="text" class="form-control input-circle" placeholder="Em bé"/>
 															</div>
 														</div>
 														<div class="form-group">
@@ -164,8 +164,8 @@
         </div>
 	</div>
 </div>
-<div th:replace="layout_admin :: footeradmin" class="page-footer"></div>
-<div th:replace="layout_admin :: topadmin" class="scroll-to-top"></div>
+<div th:replace="layout/layout_admin :: footeradmin" class="page-footer"></div>
+<div th:replace="layout/layout_admin :: topadmin" class="scroll-to-top"></div>
 <script>
 jQuery(document).ready(function() {       
    Metronic.init();

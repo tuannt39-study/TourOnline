@@ -1,29 +1,34 @@
-package vn.hkd.tour.controller;
+package vn.hkd.tour.controller.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class MainController {
+public class MainWebController {
 
     @GetMapping("/")
     public String index() {
         return "users/index";
     }
 
-    @GetMapping("/admin")
-    public String admin() {
-        return "admin/home";
-    }
-
-    @GetMapping("/403")
+    @GetMapping("/error/loi-403")
     public String accessDenied() {
         return "layout/403";
     }
 
-    @GetMapping("/login")
+    @GetMapping("/dang-nhap")
     public String getLogin() {
         return "users/dangnhap";
+    }
+
+    @GetMapping("/dang-ky")
+    public String getRegister() {
+        return "users/dangky";
+    }
+
+    @GetMapping("/lien-he")
+    public String getContact() {
+        return "users/lienhe";
     }
 
 //     @GetMapping("/logout")

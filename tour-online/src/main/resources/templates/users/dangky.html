@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout_user :: headuser"></head>
+<head th:replace="layout/layout_user :: headuser"></head>
 <body class="corporate">
-	<div th:replace="layout_user :: preheaderuser" class="pre-header"></div>
-	<div th:replace="layout_user :: headeruser" class="header"></div>
+	<div th:replace="layout/layout_user :: preheaderuser" class="pre-header"></div>
+	<div th:replace="layout/layout_user :: headeruser" class="header"></div>
     <div class="main">
       <div class="container">
         <ul class="breadcrumb">
-            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="/">Trang chủ</a></li>
             <li class="active">Đăng ký</li>
         </ul>
         <!-- BEGIN SIDEBAR & CONTENT -->
@@ -30,31 +30,31 @@
                       <div class="form-group">
                         <label for="email" class="col-lg-4 control-label">Email <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="email">
+                          <input type="text" class="form-control" id="email"/>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="name" class="col-lg-4 control-label">Họ tên <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="name">
+                          <input type="text" class="form-control" id="name"/>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="gender" class="col-lg-4 control-label">Giới tính </label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="gender">
+                          <input type="text" class="form-control" id="gender"/>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="phone_no" class="col-lg-4 control-label">Số điện thoại <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="phone_no">
+                          <input type="text" class="form-control" id="phone_no"/>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="address" class="col-lg-4 control-label">Địa chỉ <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="address">
+                          <input type="text" class="form-control" id="address"/>
                         </div>
                       </div>
                     </fieldset>
@@ -63,7 +63,7 @@
                       <div class="form-group">
                         <label for="password" class="col-lg-4 control-label">Mật khẩu <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="password">
+                          <input type="text" class="form-control" id="password"/>
                         </div>
                       </div>
                     </fieldset>
@@ -84,8 +84,8 @@
         <!-- END SIDEBAR & CONTENT -->
       </div>
       
-								<div th:replace="layout_user :: prefooteruser" class="pre-footer"></div>
-								<div th:replace="layout_user :: footeruser" class="footer"></div>
+								<div th:replace="layout/layout_user :: prefooteruser" class="pre-footer"></div>
+								<div th:replace="layout/layout_user :: footeruser" class="footer"></div>
     <script type="text/javascript">
         jQuery(document).ready(function() {
             Layout.init();

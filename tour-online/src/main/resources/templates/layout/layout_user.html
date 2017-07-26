@@ -40,10 +40,9 @@
     <script src="../../static/assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js" type="text/javascript" th:src="@{/assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.revolution.min.js}"></script>
     <script src="../../static/assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js" type="text/javascript" th:src="@{/assets/global/plugins/slider-revolution-slider/rs-plugin/js/jquery.themepunch.tools.min.js}"></script>
     <script src="../../static/assets/frontend/pages/scripts/revo-slider-init.js" type="text/javascript" th:src="@{/assets/frontend/pages/scripts/revo-slider-init.js}"></script>
-    <script src="../../static/assets/global/plugins/gmaps/gmaps.min.js" type="text/javascript" th:src="@{/assets/global/plugins/gmaps/gmaps.min.js}"></script>
     <script src="../../static/assets/global/plugins/gmaps/gmaps.js" type="text/javascript" th:src="@{/assets/global/plugins/gmaps/gmaps.js}"></script>
+    <script src="//maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
     <script src="../../static/assets/frontend/pages/scripts/contact-us.js" type="text/javascript" th:src="@{/assets/frontend/pages/scripts/contact-us.js}"></script>
-    <script src="../../static/assets/frontend/layout/scripts/mapapi.js" type="text/javascript" th:src="@{/assets/frontend/layout/scripts/mapapi.js}"></script>
     <script src="../../static/assets/frontend/layout/scripts/layout.js" type="text/javascript" th:src="@{/assets/frontend/layout/scripts/layout.js}"></script>
 </head>
 <body class="corporate">
@@ -62,8 +61,8 @@
             <!-- BEGIN TOP BAR MENU -->
             <div class="col-md-6 col-sm-6 additional-nav">
                 <ul class="list-unstyled list-inline pull-right">
-                <li><a href="dangnhap.html">Đăng nhập</a></li>
-                <li><a href="dangky.html">Đăng ký</a></li>
+                <li><a href="/dang-nhap">Đăng nhập</a></li>
+                <li><a href="/dang-ky">Đăng ký</a></li>
                 </ul>
             </div>
             <!-- END TOP BAR MENU -->
@@ -80,7 +79,7 @@
             <div class="header-navigation pull-right font-transform-inherit">
             <ul>
                 <li >
-                <a  href="index.html">
+                <a  href="/admin/trang-chu">
                     Trang chủ 
                 </a>
                 </li>
@@ -92,26 +91,26 @@
                     <li class="dropdown-submenu">
                     <a href="#">Miền bắc<i class="fa fa-angle-right"></i></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="chitiet.html">Hạ Long</a></li>
-                        <li><a href="chitiet.html">Sapa</a></li>
-                        <li><a href="chitiet.html">Hà Nội</a></li>
+                        <li><a href="#">Hạ Long</a></li>
+                        <li><a href="#">Sapa</a></li>
+                        <li><a href="#">Hà Nội</a></li>
                     </ul>
                     </li>
                     <li class="dropdown-submenu">
                     <a href="#">Miền trung<i class="fa fa-angle-right"></i></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="chitiet.html">Đà nẵng</a></li>
-                        <li><a href="chitiet.html">Nha Trang</a></li>
-                        <li><a href="chitiet.html">Đà Lạt</a></li>
-                        <li><a href="chitiet.html">Hội An</a></li>
-                        <li><a href="chitiet.html">Huế</a></li>
+                        <li><a href="#">Đà nẵng</a></li>
+                        <li><a href="#">Nha Trang</a></li>
+                        <li><a href="#">Đà Lạt</a></li>
+                        <li><a href="#">Hội An</a></li>
+                        <li><a href="#">Huế</a></li>
                     </ul>
                     </li>
                     <li class="dropdown-submenu">
                     <a href="#">Miền nam<i class="fa fa-angle-right"></i></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="chitiet.html">Hồ Chí Minh</a></li>
-                        <li><a href="chitiet.html">Côn Đảo</a></li>
+                        <li><a href="#">Hồ Chí Minh</a></li>
+                        <li><a href="#">Côn Đảo</a></li>
                     </ul>
                     </li>       
                 </ul>
@@ -122,19 +121,19 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li class="dropdown-submenu">
-                    <a href="chitiet.html">Đông Nam Á</a>
+                    <a href="#">Đông Nam Á</a>
                     </li>
 
                     <li class="dropdown-submenu">
-                    <a href="chitiet.html">Châu Á</a>
+                    <a href="#">Châu Á</a>
                     </li>
                     <li class="dropdown-submenu">
-                    <a href="chitiet.html">Châu Âu</a>
+                    <a href="#">Châu Âu</a>
                     </li>
                 </ul>
                 </li>
                 <li >
-                <a  href="lienhe.html">
+                <a  href="/lien-he">
                     Liên hệ 
                 </a>
                 </li>

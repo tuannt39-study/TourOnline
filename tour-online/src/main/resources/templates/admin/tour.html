@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout_admin :: headadmin"></head>
+<head th:replace="layout/layout_admin :: headadmin"></head>
 <body>
-<div th:replace="layout_admin :: headeradmin" class="page-header"></div>
+<div th:replace="layout/layout_admin :: headeradmin" class="page-header"></div>
 <div class="page-container">
 	<div class="page-head">
 		<div class="container">
@@ -15,7 +15,7 @@
 		<div class="container">
 			<ul class="page-breadcrumb breadcrumb">
 				<li>
-					<a href="./home.html">Trang chủ</a><i class="fa fa-circle"></i>
+					<a href="/admin/trang-chu">Trang chủ</a><i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
 					 Tour
@@ -110,7 +110,7 @@
 									Duyệt </span>
 								</td>
 								<td>
-									<a href="./tour_edit.html" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+									<a href="/admin/tour" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 								</td>
 							</tr>
 							<tr class="odd gradeX">
@@ -143,7 +143,7 @@
 									Duyệt </span>
 								</td>
 								<td>
-									<a href="javascript:;" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+									<a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 								</td>
 							</tr>
 							<tr class="odd gradeX">
@@ -176,7 +176,7 @@
 									Chờ duyệt </span>
 								</td>
 								<td>
-									<a href="javascript:;" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+									<a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 								</td>
 							</tr>
 							<tr class="odd gradeX">
@@ -209,7 +209,7 @@
 									Duyệt </span>
 								</td>
 								<td>
-									<a href="javascript:;" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+									<a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 								</td>
 							</tr>
 							<tr class="odd gradeX">
@@ -242,7 +242,7 @@
 									Hủy </span>
 								</td>
 								<td>
-									<a href="javascript:;" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+									<a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 								</td>
 							</tr>
 							<tr class="odd gradeX">
@@ -275,7 +275,7 @@
 									Duyệt </span>
 								</td>
 								<td>
-									<a href="javascript:;" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+									<a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 								</td>
 							</tr>
 							</tbody>
@@ -289,8 +289,8 @@
         </div>
 	</div>
 </div>
-<div th:replace="layout_admin :: footeradmin" class="page-footer"></div>
-<div th:replace="layout_admin :: topadmin" class="scroll-to-top"></div>
+<div th:replace="layout/layout_admin :: footeradmin" class="page-footer"></div>
+<div th:replace="layout/layout_admin :: topadmin" class="scroll-to-top"></div>
 <script>
 jQuery(document).ready(function() {       
    Metronic.init();

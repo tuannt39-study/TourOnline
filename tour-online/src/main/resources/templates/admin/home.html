@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="layout_admin :: headadmin"></head>
+<head th:replace="layout/layout_admin :: headadmin"></head>
 <body>
-<div th:replace="layout_admin :: headeradmin" class="page-header"></div>
+<div th:replace="layout/layout_admin :: headeradmin" class="page-header"></div>
 <div class="page-container">
 	<div class="page-head">
 		<div class="container">
@@ -15,7 +15,7 @@
 		<div class="container">
 			<ul class="page-breadcrumb breadcrumb">
 				<li>
-					<a href="./home.html">Trang chủ</a><i class="fa fa-circle"></i>
+					<a href="/admin/trang-chu">Trang chủ</a><i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
 					 Trang chủ
@@ -24,7 +24,7 @@
 
 			<div class="row">
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 margin-bottom-10">
-					<a class="dashboard-stat dashboard-stat-light blue-madison" href="javascript:;">
+					<a class="dashboard-stat dashboard-stat-light blue-madison" href="#">
 					<div class="visual">
 						<i class="fa fa-briefcase fa-icon-medium"></i>
 					</div>
@@ -39,7 +39,7 @@
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<a class="dashboard-stat dashboard-stat-light red-intense" href="javascript:;">
+					<a class="dashboard-stat dashboard-stat-light red-intense" href="#">
 					<div class="visual">
 						<i class="fa fa-shopping-cart"></i>
 					</div>
@@ -54,7 +54,7 @@
 					</a>
 				</div>
 				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-					<a class="dashboard-stat dashboard-stat-light green-haze" href="javascript:;">
+					<a class="dashboard-stat dashboard-stat-light green-haze" href="#">
 					<div class="visual">
 						<i class="fa fa-group fa-icon-medium"></i>
 					</div>
@@ -73,8 +73,8 @@
 		</div>
 	</div>
 </div>
-<div th:replace="layout_admin :: footeradmin" class="page-footer"></div>
-<div th:replace="layout_admin :: topadmin" class="scroll-to-top"></div>
+<div th:replace="layout/layout_admin :: footeradmin" class="page-footer"></div>
+<div th:replace="layout/layout_admin :: topadmin" class="scroll-to-top"></div>
 <script>
 jQuery(document).ready(function() {    
    Metronic.init();
