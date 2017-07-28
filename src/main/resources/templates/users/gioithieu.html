@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout_user :: headuser"></head>
+<body class="corporate">
+	<div th:replace="layout/layout_user :: preheaderuser" class="pre-header"></div>
+	<div th:replace="layout/layout_user :: headeruser" class="header"></div>
+    <div class="main">
+      <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="/">Trang chủ</a></li>
+            <li><a href="#">Bài viết</a></li>
+            <li class="active">Giới thiệu</li>
+        </ul>
+        <!-- BEGIN SIDEBAR & CONTENT -->
+        <div class="row margin-bottom-40">
+          <!-- BEGIN CONTENT -->
+          <div class="col-md-12 col-sm-12">
+            <h1>Giới thiệu</h1>
+            <div class="content-page">
+              <div class="row margin-bottom-30">
+                <!-- BEGIN INFO BLOCK -->               
+                <div class="col-md-7">
+                  <h2 class="no-top-space">FF.T</h2>
+                  <p>Nhóm chúng tôi có 4 thành viên và có thể làm tất cả mọi thứ liên quan đến lập trình . </p> 
+                  <p></p>
+                  <!-- BEGIN LISTS -->
+                  <div class="row front-lists-v1">
+                    <div class="col-md-6">
+                      <ul class="list-unstyled margin-bottom-20">
+                        <li><i class="fa fa-check"></i> Officia deserunt molliti</li>
+                        <li><i class="fa fa-check"></i> Consectetur adipiscing </li>
+                        <li><i class="fa fa-check"></i> Deserunt fpicia</li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul class="list-unstyled">
+                        <li><i class="fa fa-check"></i> Officia deserunt molliti</li>
+                        <li><i class="fa fa-check"></i> Consectetur adipiscing </li>
+                        <li><i class="fa fa-check"></i> Deserunt fpicia</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- END LISTS -->
+                </div>
+                <!-- END INFO BLOCK -->   
+
+                <!-- BEGIN CAROUSEL -->            
+                <!-- END CAROUSEL -->
+              </div>
+
+              <div class="row margin-bottom-40">
+                <!-- BEGIN TESTIMONIALS -->
+               
+                <!-- END TESTIMONIALS --> 
+
+                <!-- BEGIN PROGRESS BAR -->
+                <div class="col-md-5 front-skills" >
+                  <h2 class="block">Kỹ năng</h2>
+                  <span>UI design 100%</span>
+                  <div class="progress">
+                    <div role="progressbar" class="progress-bar" style="width: 100%;"></div>
+                  </div>
+                  <span>Wordpress CMS 99%</span>
+                  <div class="progress">
+                    <div role="progressbar" class="progress-bar" style="width: 99%;"></div>
+                  </div>
+                  <span>HTML/CSS &amp; JavaScirp 98%</span>
+                  <div class="progress">
+                    <div role="progressbar" class="progress-bar" style="width: 98%;"></div>
+                  </div>
+                </div>                       
+                <!-- END PROGRESS BAR -->
+              </div>
+
+              
+
+            </div>
+          </div>
+          <!-- END CONTENT -->
+        </div>
+        <!-- END SIDEBAR & CONTENT -->
+      </div>
+    </div>
+<div th:replace="layout/layout_user :: prefooteruser" class="pre-footer"></div>
+								<div th:replace="layout/layout_user :: footeruser" class="footer"></div>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            Layout.init();    
+            Layout.initTwitter();
+        });
+    </script>
+    <!-- END PAGE LEVEL JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

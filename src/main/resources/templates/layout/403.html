@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout_user :: headuser"></head>
+<body class="corporate">
+<div th:replace="layout/layout_user :: preheaderuser" class="pre-header"></div>
+<div th:replace="layout/layout_user :: headeruser" class="header"></div>
+<div class="main">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="/">Trang chủ</a></li>
+            <li class="active">403</li>
+        </ul>
+        <!-- BEGIN SIDEBAR & CONTENT -->
+        <div class="row margin-bottom-40">
+            <!-- BEGIN SIDEBAR -->
+            <div class="sidebar col-md-3 col-sm-3">
+
+            </div>
+            <!-- END SIDEBAR -->
+
+            <!-- BEGIN CONTENT -->
+            <div class="col-md-9 col-sm-9">
+                <h1>Lỗi 403</h1>
+            </div>
+        </div>
+        <!-- END CONTENT -->
+    </div>
+    <!-- END SIDEBAR & CONTENT -->
+</div>
+
+<div th:replace="layout/layout_user :: prefooteruser" class="pre-footer"></div>
+<div th:replace="layout/layout_user :: footeruser" class="footer"></div>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        Layout.init();
+        Layout.initUniform();
+        Layout.initTwitter();
+    });
+</script>
+<!-- END PAGE LEVEL JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
