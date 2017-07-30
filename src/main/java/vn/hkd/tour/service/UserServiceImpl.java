@@ -16,9 +16,6 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
-	@Autowired
-	private PasswordEncoder passwordEncoder;
-	
 	@Override
 	@Transactional(readOnly = true)
 	public List<User> findAll() {
@@ -54,8 +51,7 @@ public class UserServiceImpl implements UserService {
 	public User checkLogin(User user) {
 		User ret = null;
 		User dbUser = userRepository.findByEmail(user.getEmail());
-		if (dbUser != null 
-				&& passwordEncoder.matches(user.getPassword(), dbUser.getPassword())) {
+		if (dbUser != null) {
 			ret = new User();
 			ret.setId(dbUser.getId());
 			ret.setName(dbUser.getName());
