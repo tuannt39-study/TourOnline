@@ -9,6 +9,8 @@ public interface UserService {
 	List<User> findAll();
 	
 	User findOne(Integer id);
+
+	User findOne(String email);
 	
 	long countAll();
 	
@@ -17,5 +19,7 @@ public interface UserService {
 	User checkLogin(User user);
 	
 	boolean register(User user);
+
+	void save(User user);
 	
 }

@@ -39,6 +39,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 					.antMatchers("/dang-nhap").permitAll()
 					.antMatchers("/admin").permitAll()
 					.antMatchers("/admin/**").permitAll()
+//					.antMatchers("/", "/home", "/about").permitAll()
+//					.antMatchers("/admin/**").hasAnyRole("ADMIN")
 //                    .antMatchers("/admin").hasRole("ADMIN")
 //                    .antMatchers("/admin/**").access("hasRole('ADMIN')")
 					.and()

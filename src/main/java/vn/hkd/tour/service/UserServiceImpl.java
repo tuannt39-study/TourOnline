@@ -30,6 +30,12 @@ public class UserServiceImpl implements UserService {
 	public User findOne(Integer id) {
 		return userRepository.findOne(id);
 	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public User findOne(String email) {
+		return userRepository.findByEmail(email);
+	}
 	
 	@Override
 	@Transactional(readOnly = true)
@@ -67,6 +73,11 @@ public class UserServiceImpl implements UserService {
 		}
 		userRepository.save(user);
 		return true;
+	}
+
+	@Override
+	public void save(User user) {
+		userRepository.save(user);
 	}
 
 }
