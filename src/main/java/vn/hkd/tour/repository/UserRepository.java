@@ -14,5 +14,7 @@ public interface UserRepository extends CrudRepository<User, Integer> {
 	
 	@Query("from User u left join fetch u.roles where u.email = ?1")
 	User findByEmail(String email);
+
+	List<User> findByName(String q);
 	
 }

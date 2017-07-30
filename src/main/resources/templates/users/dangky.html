@@ -24,37 +24,38 @@
             <div class="content-form-page">
               <div class="row">
                 <div class="col-md-7 col-sm-7">
-                  <form class="form-horizontal" role="form" action="#" th:action="@{/dang-ky}" method="POST">
+                  <form class="form-horizontal" role="form" action="#" th:action="@{/dang-ky}" th:object="${user}" method="post">
                     <fieldset>
                       <legend>Thông tin cá nhân</legend>
                       <div class="form-group">
                         <label for="email" class="col-lg-4 control-label">Email <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="email" class="form-control" id="email" th:field="*{email}"  name="email"/>
+                          <input type="email" class="form-control" id="email" th:field="*{email}"/>
+                          <em th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></em>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="name" class="col-lg-4 control-label">Họ tên <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="name" th:field="*{name}"  name="name"/>
+                          <input type="text" class="form-control" id="name" th:field="*{name}"/>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="gender" class="col-lg-4 control-label">Giới tính </label>
+                        <label for="gender" class="col-lg-4 control-label">Giới tính <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="gender" th:field="*{gender}"  name="gender"/>
+                          <input type="text" class="form-control" id="gender" th:field="*{gender}" />
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="phone_no" class="col-lg-4 control-label">Số điện thoại <span class="require">*</span></label>
+                        <label for="phone" class="col-lg-4 control-label">Số điện thoại <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="phone_no" th:field="*{phone_no}"  name="phone_no"/>
+                          <input type="text" class="form-control" id="phone" th:field="*{phone}"/>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="address" class="col-lg-4 control-label">Địa chỉ <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="address" th:field="*{address}"  name="address"/>
+                          <input type="text" class="form-control" id="address" th:field="*{address}"/>
                         </div>
                       </div>
                     </fieldset>
@@ -63,12 +64,12 @@
                       <div class="form-group">
                         <label for="password" class="col-lg-4 control-label">Mật khẩu <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="password" class="form-control" id="password" th:field="*{password}"  name="password"/>
+                          <input type="password" class="form-control" id="password" th:field="*{password}"/>
                         </div>
                       </div>
                     </fieldset>
                     <div class="row">
-                      <div class="col-lg-8 col-md-offset-4 padding-left-0 padding-top-20">                        
+                      <div class="col-lg-8 col-md-offset-4 padding-left-0 padding-top-20">
                         <button type="submit" class="btn btn-primary">Đăng ký tài khoản</button>
                       </div>
                     </div>

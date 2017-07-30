@@ -24,6 +24,7 @@
             <div class="content-form-page">
               <div class="row">
                 <div class="col-md-7 col-sm-7">
+                  <p th:if="${param.register}" class="success">Error <span th:text="${success}"></span></p>
                   <p th:if="${param.error}" class="error">Email hoặc mật khẩu không chính xác</p>
                   <p th:if="${param.register}" class="success">Bạn đã đăng ký thành công!</p>
                   <p th:if="${param.logout}" class="success">Bạn vừa đăng xuất</p>

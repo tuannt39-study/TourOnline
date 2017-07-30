@@ -40,13 +40,15 @@ public class User implements Serializable {
 	private String email;
 
 	@NotEmpty
-	@Length(min = 6)
+	@Length(min = 4)
 	@Column(name = "pwd", nullable = false)
 	private String password;
 
 	@Transient
 	private String confirmPassword;
 
+    @NotEmpty
+    @Length(min = 10)
 	@Column(name = "phone_no", nullable = false)
 	private String phone;
 
@@ -134,6 +136,34 @@ public class User implements Serializable {
     public void removeRole(Role role) {
         roles.remove(role);
         role.getUsers().remove(this);
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     @Override
