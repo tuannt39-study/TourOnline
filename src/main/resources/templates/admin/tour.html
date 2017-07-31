@@ -80,202 +80,22 @@
 							</tr>
 							</thead>
 							<tbody>
-							<tr class="odd gradeX">
-								<td>
-									 11
-								</td>
-								<td>
-									11
-								</td>
-								<td>
-									../static/assets/admin/layout3/img/logo-default.png
-								</td>
-								<td>
-									 11
-								</td>
-								<td>
-									 11
-								</td>
-								<td>
-									 11
-								</td>
-								<td>
-									 11
-								</td>
-								<td>
-									 11
-								</td>
+							<tr class="odd gradeX" th:each="tour, iterStat : ${tours}">
+								<td th:text="${iterStat.count}"></td>
+								<td th:text="${tour.name}"> </td>
+								<td th:text="${tour.image}"> </td>
+								<td th:text="${tour.length}"> </td>
+								<td th:text="${tour.origin}"> </td>
+								<td th:text="${tour.promotion}"> </td>
 								<td>
 									<span class="label label-primary">
 									Duyệt </span>
 								</td>
 								<td>
-									<a href="/admin/tour" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
-								</td>
-							</tr>
-							<tr class="odd gradeX">
-								<td>
-									 22
+									<a th:href="@{/admin/tour/{id}/edit(id=${tour.id})}" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 								</td>
 								<td>
-									 22
-								</td>
-								<td>
-									../static/assets/admin/layout3/img/logo-default.png
-								</td>
-								<td>
-									 22
-								</td>
-								<td>
-									 22
-								</td>
-								<td>
-									 22
-								</td>
-								<td>
-									 22
-								</td>
-								<td>
-									 22
-								</td>
-								<td>
-									<span class="label label-primary">
-									Duyệt </span>
-								</td>
-								<td>
-									<a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
-								</td>
-							</tr>
-							<tr class="odd gradeX">
-								<td>
-									 33
-								</td>
-								<td>
-									 33
-								</td>
-								<td>
-									../static/assets/admin/layout3/img/logo-default.png
-								</td>
-								<td>
-									 33
-								</td>
-								<td>
-									 33
-								</td>
-								<td>
-									 33
-								</td>
-								<td>
-									 33
-								</td>
-								<td>
-									 33
-								</td>
-								<td>
-									<span class="label label-info">
-									Chờ duyệt </span>
-								</td>
-								<td>
-									<a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
-								</td>
-							</tr>
-							<tr class="odd gradeX">
-								<td>
-									 44
-								</td>
-								<td>
-									 44
-								</td>
-								<td>
-									../static/assets/admin/layout3/img/logo-default.png
-								</td>
-								<td>
-									 44
-								</td>
-								<td>
-									 44
-								</td>
-								<td>
-									 44
-								</td>
-								<td>
-									 44
-								</td>
-								<td>
-									 44
-								</td>
-								<td>
-									<span class="label label-primary">
-									Duyệt </span>
-								</td>
-								<td>
-									<a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
-								</td>
-							</tr>
-							<tr class="odd gradeX">
-								<td>
-									 55
-								</td>
-								<td>
-									 55
-								</td>
-								<td>
-									../static/assets/admin/layout3/img/logo-default.png
-								</td>
-								<td>
-									 55
-								</td>
-								<td>
-									 55
-								</td>
-								<td>
-									 55
-								</td>
-								<td>
-									 55
-								</td>
-								<td>
-									 55
-								</td>
-								<td>
-									<span class="label label-default">
-									Hủy </span>
-								</td>
-								<td>
-									<a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
-								</td>
-							</tr>
-							<tr class="odd gradeX">
-								<td>
-									 66
-								</td>
-								<td>
-									 66
-								</td>
-								<td>
-									../static/assets/admin/layout3/img/logo-default.png
-								</td>
-								<td>
-									 66
-								</td>
-								<td>
-									 66
-								</td>
-								<td>
-									 66
-								</td>
-								<td>
-									 66
-								</td>
-								<td>
-									 66
-								</td>
-								<td>
-									<span class="label label-primary">
-									Duyệt </span>
-								</td>
-								<td>
-									<a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+									<a th:href="@{/admin/tour/{id}/delete(id=${tour.id})}" th:attr="onclick='return confirm(\'Bạn có đồng ý xóa tour này không?\');'" class="btn btn-icon-only btn-circle red"><i class="fa fa-times-circle"></i></a>
 								</td>
 							</tr>
 							</tbody>
