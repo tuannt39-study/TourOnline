@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/tour-online.iml" filepath="$PROJECT_DIR$/tour-online.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tour-Online.iml" filepath="$PROJECT_DIR$/Tour-Online.iml" />
     </modules>
   </component>
 </project>
