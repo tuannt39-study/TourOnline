@@ -5,11 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
+public class TourController {
 
-    @GetMapping("/admin")
-    public String home(Model model) {
-        return "dashboardAD";
+    @GetMapping("/admin/tour")
+    public String tour(Model model) {
+        return "tourAD";
     }
-
 }

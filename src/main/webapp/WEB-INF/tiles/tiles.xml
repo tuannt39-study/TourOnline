@@ -3,42 +3,42 @@
 
 <tiles-definitions>
 
-    <definition name="admin-definition"
+    <definition name="admin"
                 template="/WEB-INF/tiles/layout/admin.jsp">
-        <put-attribute name="head" value="/WEB-INF/tiles/widget/admin/head.jsp" />
-        <put-attribute name="header" value="/WEB-INF/tiles/widget/admin/header.jsp" />
+        <put-attribute name="head" value="/WEB-INF/tiles/widget/admin/headAD.jsp" />
+        <put-attribute name="header" value="/WEB-INF/tiles/widget/admin/headerAD.jsp" />
         <put-attribute name="main" value="" />
-        <put-attribute name="footer" value="/WEB-INF/tiles/widget/admin/footer.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/widget/admin/footerAD.jsp" />
     </definition>
 
-    <definition name="user-definition"
+    <definition name="users"
                 template="/WEB-INF/tiles/layout/user.jsp">
-        <put-attribute name="head" value="/WEB-INF/tiles/widget/user/head.jsp" />
-        <put-attribute name="header" value="/WEB-INF/tiles/widget/user/header.jsp" />
+        <put-attribute name="head" value="/WEB-INF/tiles/widget/user/headUS.jsp" />
+        <put-attribute name="header" value="/WEB-INF/tiles/widget/user/headerUS.jsp" />
         <put-attribute name="main" value="" />
-        <put-attribute name="footer" value="/WEB-INF/tiles/widget/user/footer.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/widget/user/footerUS.jsp" />
     </definition>
 
-    <definition name="error-definition"
+    <definition name="errors"
                 template="/WEB-INF/tiles/layout/error.jsp">
-        <put-attribute name="head" value="/WEB-INF/tiles/widget/user/head.jsp" />
-        <put-attribute name="header" value="/WEB-INF/tiles/widget/user/header.jsp" />
+        <put-attribute name="head" value="/WEB-INF/tiles/widget/user/headUS.jsp" />
+        <put-attribute name="header" value="/WEB-INF/tiles/widget/user/headerUS.jsp" />
         <put-attribute name="error-color" value="" />
         <put-attribute name="error-name" value="" />
         <put-attribute name="error-message" value="" />
-        <put-attribute name="footer" value="/WEB-INF/tiles/widget/user/footer.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/widget/user/footerUS.jsp" />
     </definition>
 
     <!-- ====================== -->
 
-    <definition name="403" extends="error-definition">
+    <definition name="403" extends="errors">
         <put-attribute name="title" value="Hackademics Hà Nội | Access denied" />
         <put-attribute name="error-color" value="yellow" />
         <put-attribute name="error-name" value="403" />
         <put-attribute name="error-message" value="Oops! You are not authorized to access this page." />
     </definition>
 
-    <definition name="404" extends="error-definition">
+    <definition name="404" extends="errors">
         <put-attribute name="title" value="Hackademics Hà Nội | Page not found" />
         <put-attribute name="error-color" value="red" />
         <put-attribute name="error-name" value="404" />
@@ -47,94 +47,94 @@
 
     <!-- ====================== -->
 
-    <definition name="home" extends="user-definition">
+    <definition name="homeUS" extends="users">
         <put-attribute name="title" value="Hackademics Hà Nội | Trang chủ" />
-        <put-attribute name="main" value="/WEB-INF/pages/user/index.jsp" />
+        <put-attribute name="main" value="/WEB-INF/pages/user/trangchu.jsp" />
     </definition>
 
-    <definition name="chitiet" extends="user-definition">
+    <definition name="chitietUS" extends="users">
         <put-attribute name="title" value="Hackademics Hà Nội | Chi tiết Tour" />
         <put-attribute name="main" value="/WEB-INF/pages/user/chitiet.jsp" />
     </definition>
 
-    <definition name="dangky" extends="user-definition">
+    <definition name="dangkyUS" extends="users">
         <put-attribute name="title" value="Hackademics Hà Nội | Đăng ký" />
         <put-attribute name="main" value="/WEB-INF/pages/user/dangky.jsp" />
     </definition>
 
-    <definition name="dangnhap" extends="user-definition">
+    <definition name="dangnhapUS" extends="users">
         <put-attribute name="title" value="Hackademics Hà Nội | Đăng nhập" />
         <put-attribute name="main" value="/WEB-INF/pages/user/dangnhap.jsp" />
     </definition>
 
-    <definition name="dattour" extends="user-definition">
+    <definition name="dattourUS" extends="users">
         <put-attribute name="title" value="Hackademics Hà Nội | Đặt Tour" />
         <put-attribute name="main" value="/WEB-INF/pages/user/dattour.jsp" />
     </definition>
 
-    <definition name="lienhe" extends="user-definition">
+    <definition name="lienheUS" extends="users">
         <put-attribute name="title" value="Hackademics Hà Nội | Liên hệ" />
         <put-attribute name="main" value="/WEB-INF/pages/user/lienhe.jsp" />
     </definition>
 
     <!-- ====================== -->
 
-    <definition name="dashboard" extends="admin-definition">
+    <definition name="dashboardAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Admin" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/home.jsp" />
     </definition>
 
-    <definition name="account" extends="admin-definition">
+    <definition name="accountAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Account Manager" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/account.jsp" />
     </definition>
 
-    <definition name="account_edit" extends="admin-definition">
+    <definition name="account_editAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Account Edit" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/account_edit.jsp" />
     </definition>
 
-    <definition name="account_id" extends="admin-definition">
+    <definition name="account_idAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Account Id" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/account_id.jsp" />
     </definition>
 
-    <definition name="booking" extends="admin-definition">
+    <definition name="bookingAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Booking Manager" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/booking.jsp" />
     </definition>
 
-    <definition name="booking_edit" extends="admin-definition">
+    <definition name="booking_editAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Booking Edit" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/booking_edit.jsp" />
     </definition>
 
-    <definition name="contact" extends="admin-definition">
+    <definition name="contactAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Contact Manager" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/contact.jsp" />
     </definition>
 
-    <definition name="hdv" extends="admin-definition">
+    <definition name="hdvAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Guide Manager" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/hdv.jsp" />
     </definition>
 
-    <definition name="hdv_edit" extends="admin-definition">
+    <definition name="hdv_editAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Guide Edit" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/hdv_edit.jsp" />
     </definition>
 
-    <definition name="hdv_id" extends="admin-definition">
+    <definition name="hdv_idAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Guide Id" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/hdv_id.jsp" />
     </definition>
 
-    <definition name="tour" extends="admin-definition">
+    <definition name="tourAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Tour Manager" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/tour.jsp" />
     </definition>
 
-    <definition name="tour_edit" extends="admin-definition">
+    <definition name="tour_editAD" extends="admin">
         <put-attribute name="title" value="Hackademics Hà Nội | Tour Edit" />
         <put-attribute name="main" value="/WEB-INF/pages/admin/tour_edit.jsp" />
     </definition>

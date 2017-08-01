@@ -27,27 +27,26 @@ public class WebController {
     UserValidator userValidator;
 
     @GetMapping("/")
-    public String index() {
-        return "index";
+    public String index(Model model) {
+        return "homeUS";
     }
     
     @GetMapping("/dang-nhap")
-    public String login() {
-        return "dangnhap";
+    public String login(Model model) {
+        return "dangnhapUS";
     }
 
     @GetMapping("/dang-ky")
     public String getRegister(Model model) {
         model.addAttribute("user", new User());
-        return "dangky";
+        return "dangkyUS";
     }
 
     @PostMapping("/dang-ky")
-    public String postRegister(@Valid User user, BindingResult result,
-            RedirectAttributes redirect) {
+    public String postRegister(@Valid User user, BindingResult result, RedirectAttributes redirect, Model model) {
         userValidator.validate(user, result);
         if (result.hasErrors()) {
-            return "dangky";
+            return "dangkyUS";
         }
         userService.create(user, "member");
         redirect.addFlashAttribute("success", "You registered successfully!");
@@ -55,7 +54,7 @@ public class WebController {
     }
 
     @GetMapping("/logout")
-    public String logout(HttpServletRequest request, HttpServletResponse response) {
+    public String logout(HttpServletRequest request, HttpServletResponse response, Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth != null) {
             new SecurityContextLogoutHandler().logout(request, response, auth);
@@ -64,12 +63,12 @@ public class WebController {
     }
 
     @GetMapping("/lien-he")
-    public String getContact() {
-        return "lienhe";
+    public String getContact(Model model) {
+        return "lienheUS";
     }
     
     @GetMapping("/error/loi-403")
-    public String accessDenied() {
+    public String accessDenied(Model model) {
     	return "403";
     }
     
