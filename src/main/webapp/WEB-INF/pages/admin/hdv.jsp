@@ -16,7 +16,7 @@
 		<div class="container">
 			<ul class="page-breadcrumb breadcrumb">
 				<li>
-					<a href="/admin">Trang chủ</a><i class="fa fa-circle"></i>
+					<a href="<c:url value="/admin"/>">Trang chủ</a><i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
 					 Hướng dẫn viên
@@ -81,7 +81,7 @@
 									tuannt@gmail.com </a>
 								</td>
 								<td>
-									<a href="/admin/huong-dan-vien">
+									<a href="<c:url value="/admin/huong-dan-vien"/>">
 									Nguyễn Thế Tuân </a>
 								</td>
 								<td>
@@ -95,7 +95,7 @@
 									Hoạt động </span>
 								</td>
 								<td>
-									<a href="/admin/huong-dan-vien" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+									<a href="<c:url value="/admin/huong-dan-vien"/>" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 								</td>
 							</tr>
 							<tr class="odd gradeX">

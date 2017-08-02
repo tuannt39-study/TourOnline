@@ -38,22 +38,22 @@
             <div class="hor-menu ">
                 <ul class="nav navbar-nav">
                     <li class="menu-dropdown">
-                        <a href="/admin">Trang chủ</a>
+                        <a href="<c:url value="/admin"/>">Trang chủ</a>
                     </li>
                     <li class="menu-dropdown">
-                        <a href="/admin/tai-khoan">Tài khoản </a>
+                        <a href="<c:url value="/admin/tai-khoan"/>">Tài khoản </a>
                     </li>
                     <li class="menu-dropdown">
-                        <a href="/admin/tour">Tour </a>
+                        <a href="<c:url value="/admin/tour"/>">Tour </a>
                     </li>
                     <li class="menu-dropdown">
-                        <a href="/admin/dat-tour">Booking Tour </a>
+                        <a href="<c:url value="/admin/dat-tour"/>">Booking Tour </a>
                     </li>
                     <li class="menu-dropdown">
-                        <a href="/admin/huong-dan-vien">Hướng dẫn viên </a>
+                        <a href="<c:url value="/admin/huong-dan-vien"/>">Hướng dẫn viên </a>
                     </li>
                     <li class="menu-dropdown">
-                        <a href="/admin/lien-he">Liên hệ </a>
+                        <a href="<c:url value="/admin/lien-he"/>">Liên hệ </a>
                     </li>
                 </ul>
             </div>

@@ -43,13 +43,14 @@ public class WebController {
     }
 
     @PostMapping("/dang-ky")
-    public String postRegister(@Valid User user, BindingResult result, RedirectAttributes redirect, Model model) {
+    public String postRegister(@Valid User user, BindingResult result,
+                               RedirectAttributes redirect) {
         userValidator.validate(user, result);
         if (result.hasErrors()) {
             return "dangkyUS";
         }
         userService.create(user, "member");
-        redirect.addFlashAttribute("success", "You registered successfully!");
+        redirect.addFlashAttribute("success", "Đăng ký thành công");
         return "redirect:/dang-nhap";
     }
 

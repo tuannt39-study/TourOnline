@@ -16,7 +16,7 @@
 		<div class="container">
 			<ul class="page-breadcrumb breadcrumb">
 				<li>
-					<a href="/admin">Trang chủ</a><i class="fa fa-circle"></i>
+					<a href="<c:url value="/admin"/>">Trang chủ</a><i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
 					 Tour
@@ -49,56 +49,104 @@
 							<thead>
 							<tr>
 								<th>
-									 ID
+									ID
 								</th>
 								<th>
-									 Tên Tour
+									Tên Tour
 								</th>
 								<th>
 									Ảnh tour
 								</th>
 								<th>
-									 Thời gian
+									Thời gian
 								</th>
 								<th>
-									 Gíá
+									Gíá
 								</th>
 								<th>
-									 Giá khuyến mãi
+									Giá khuyến mãi
 								</th>
 								<th>
-									 Nơi khởi hành
+									Nơi khởi hành
 								</th>
 								<th>
-									 Dịch vụ
+									Dịch vụ
 								</th>
 								<th>
-									 Trạng thái
+									Trạng thái
 								</th>
 								<th>
-									 Tùy chọn
+									Tùy chọn
 								</th>
 							</tr>
 							</thead>
-							<tbody>
-							<tr class="odd gradeX" th:each="tour, iterStat : ${tours}">
-								<td th:text="${iterStat.count}"></td>
-								<td th:text="${tour.name}"> </td>
-								<td th:text="${tour.image}"> </td>
-								<td th:text="${tour.length}"> </td>
-								<td th:text="${tour.origin}"> </td>
-								<td th:text="${tour.promotion}"> </td>
-								<td>
+								<tbody>
+								<tr class="odd gradeX">
+									<td>
+										11
+									</td>
+									<td>
+										11
+									</td>
+									<td>
+										../static/assets/admin/layout3/img/logo-default.png
+									</td>
+									<td>
+										11
+									</td>
+									<td>
+										11
+									</td>
+									<td>
+										11
+									</td>
+									<td>
+										11
+									</td>
+									<td>
+										11
+									</td>
+									<td>
 									<span class="label label-primary">
 									Duyệt </span>
-								</td>
-								<td>
-									<a th:href="@{/admin/tour/{id}/edit(id=${tour.id})}" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
-								</td>
-								<td>
-									<a th:href="@{/admin/tour/{id}/delete(id=${tour.id})}" th:attr="onclick='return confirm(\'Bạn có đồng ý xóa tour này không?\');'" class="btn btn-icon-only btn-circle red"><i class="fa fa-times-circle"></i></a>
-								</td>
-							</tr>
+									</td>
+									<td>
+										<a href="<c:url value="/admin/tour"/>" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+									</td>
+								</tr>
+								<tr class="odd gradeX">
+									<td>
+										22
+									</td>
+									<td>
+										22
+									</td>
+									<td>
+										../static/assets/admin/layout3/img/logo-default.png
+									</td>
+									<td>
+										22
+									</td>
+									<td>
+										22
+									</td>
+									<td>
+										22
+									</td>
+									<td>
+										22
+									</td>
+									<td>
+										22
+									</td>
+									<td>
+									<span class="label label-primary">
+									Duyệt </span>
+									</td>
+									<td>
+										<a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+									</td>
+								</tr>
 							</tbody>
 							</table>
 						</div>

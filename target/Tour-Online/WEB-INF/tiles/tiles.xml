@@ -5,28 +5,28 @@
 
     <definition name="admin"
                 template="/WEB-INF/tiles/layout/admin.jsp">
-        <put-attribute name="head" value="/WEB-INF/tiles/widget/admin/head.jsp" />
-        <put-attribute name="header" value="/WEB-INF/tiles/widget/admin/header.jsp" />
+        <put-attribute name="head" value="/WEB-INF/tiles/widget/admin/headAD.jsp" />
+        <put-attribute name="header" value="/WEB-INF/tiles/widget/admin/headerAD.jsp" />
         <put-attribute name="main" value="" />
-        <put-attribute name="footer" value="/WEB-INF/tiles/widget/admin/footer.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/widget/admin/footerAD.jsp" />
     </definition>
 
     <definition name="users"
                 template="/WEB-INF/tiles/layout/user.jsp">
-        <put-attribute name="head" value="/WEB-INF/tiles/widget/user/head.jsp" />
-        <put-attribute name="header" value="/WEB-INF/tiles/widget/user/header.jsp" />
+        <put-attribute name="head" value="/WEB-INF/tiles/widget/user/headUS.jsp" />
+        <put-attribute name="header" value="/WEB-INF/tiles/widget/user/headerUS.jsp" />
         <put-attribute name="main" value="" />
-        <put-attribute name="footer" value="/WEB-INF/tiles/widget/user/footer.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/widget/user/footerUS.jsp" />
     </definition>
 
     <definition name="errors"
                 template="/WEB-INF/tiles/layout/error.jsp">
-        <put-attribute name="head" value="/WEB-INF/tiles/widget/user/head.jsp" />
-        <put-attribute name="header" value="/WEB-INF/tiles/widget/user/header.jsp" />
+        <put-attribute name="head" value="/WEB-INF/tiles/widget/user/headUS.jsp" />
+        <put-attribute name="header" value="/WEB-INF/tiles/widget/user/headerUS.jsp" />
         <put-attribute name="error-color" value="" />
         <put-attribute name="error-name" value="" />
         <put-attribute name="error-message" value="" />
-        <put-attribute name="footer" value="/WEB-INF/tiles/widget/user/footer.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/widget/user/footerUS.jsp" />
     </definition>
 
     <!-- ====================== -->
@@ -49,7 +49,7 @@
 
     <definition name="homeUS" extends="users">
         <put-attribute name="title" value="Hackademics Hà Nội | Trang chủ" />
-        <put-attribute name="main" value="/WEB-INF/pages/user/index.jsp" />
+        <put-attribute name="main" value="/WEB-INF/pages/user/trangchu.jsp" />
     </definition>
 
     <definition name="chitietUS" extends="users">

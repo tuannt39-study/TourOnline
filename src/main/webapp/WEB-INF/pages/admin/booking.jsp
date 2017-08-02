@@ -16,7 +16,7 @@
 		<div class="container">
 			<ul class="page-breadcrumb breadcrumb">
 				<li>
-					<a href="/admin">Trang chủ</a><i class="fa fa-circle"></i>
+					<a href="<c:url value="/admin"/>">Trang chủ</a><i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
 					 Booking Tour
@@ -89,7 +89,7 @@
 									 2017-04-20
 								</td>
 								<td>
-									<a href="/admin/tai-khoan">
+									<a href="<c:url value="/admin/tai-khoan"/>">
 									Nguyễn Thế Tuân </a>
 								</td>
 								<td>
@@ -118,7 +118,7 @@
 									Xong </span>
 								</td>
 								<td>
-									<a href="/admin/dat-tour" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+									<a href="<c:url value="/admin/dat-tour"/>" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 								</td>
 							</tr>
 							<tr class="odd gradeX">

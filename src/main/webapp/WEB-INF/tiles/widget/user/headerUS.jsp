@@ -19,8 +19,8 @@
             <!-- BEGIN TOP BAR MENU -->
             <div class="col-md-6 col-sm-6 additional-nav">
                 <ul class="list-unstyled list-inline pull-right">
-                    <li><a href="/dang-nhap">Đăng nhập</a></li>
-                    <li><a href="/dang-ky">Đăng ký</a></li>
+                    <li><a href="<c:url value="/dang-nhap"/>">Đăng nhập</a></li>
+                    <li><a href="<c:url value="/dang-ky"/>">Đăng ký</a></li>
                 </ul>
             </div>
             <!-- END TOP BAR MENU -->
@@ -32,12 +32,12 @@
 <div class="header">
     <div class="container">
         <a class="site-logo" href="#"><img src="<c:url value="/static/assets/frontend/layout/img/logos/logo-kv.jpg"/>" alt="Metronic FrontEnd" /></a>
-        <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
+        <a href="#" class="mobi-toggler"><i class="fa fa-bars"></i></a>
         <!-- BEGIN NAVIGATION -->
         <div class="header-navigation pull-right font-transform-inherit">
             <ul>
                 <li >
-                    <a  href="/">
+                    <a  href="#">
                         Trang chủ
                     </a>
                 </li>
@@ -90,7 +90,7 @@
                     </ul>
                 </li>
                 <li >
-                    <a  href="/lien-he">
+                    <a  href="<c:url value="/lien-he"/>">
                         Liên hệ
                     </a>
                 </li>

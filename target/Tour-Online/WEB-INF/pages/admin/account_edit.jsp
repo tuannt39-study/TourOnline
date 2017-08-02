@@ -16,10 +16,10 @@
 		<div class="container">
 			<ul class="page-breadcrumb breadcrumb">
 				<li>
-					<a href="/admin">Trang chủ</a><i class="fa fa-circle"></i>
+					<a href="<c:url value="/admin"/>">Trang chủ</a><i class="fa fa-circle"></i>
 				</li>
 				<li>
-					 <a href="/admin/tai-khoan">Tài khoản</a><i class="fa fa-circle"></i>
+					 <a href="<c:url value="/admin/tai-khoan"/>">Tài khoản</a><i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
 					 Nguyễn Thế Tuân

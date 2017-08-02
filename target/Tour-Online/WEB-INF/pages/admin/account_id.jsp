@@ -16,10 +16,10 @@
 		<div class="container">
 			<ul class="page-breadcrumb breadcrumb">
 				<li>
-					<a href="/admin">Trang chủ</a><i class="fa fa-circle"></i>
+					<a href="<c:url value="/admin"/>">Trang chủ</a><i class="fa fa-circle"></i>
 				</li>
 				<li>
-					 <a href="/admin/tai-khoan">Tài khoản</a><i class="fa fa-circle"></i>
+					 <a href="<c:url value="/admin/tai-khoan"/>">Tài khoản</a><i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
 					 Nguyễn Thế Tuân
@@ -96,8 +96,8 @@
 														<div class="form-group">
 															<label class="col-md-3 control-label">Tour đã đặt </label>
 															<div class="col-md-4">
-																<a href="/admin/tour" class="form-control-static">11</a> (1 lần) - 
-																<a href="/admin/tour" class="form-control-static">12</a> (2 lần) 
+																<a href="<c:url value="/admin/tour"/>" class="form-control-static">11</a> (1 lần) -
+																<a href="<c:url value="/admin/tour"/>" class="form-control-static">12</a> (2 lần)
 															</div>
 														</div>
 														<div class="form-group">

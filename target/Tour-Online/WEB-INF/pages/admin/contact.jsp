@@ -16,7 +16,7 @@
 		<div class="container">
 			<ul class="page-breadcrumb breadcrumb">
 				<li>
-					<a href="/admin">Trang chủ</a><i class="fa fa-circle"></i>
+					<a href="<c:url value="/admin"/>">Trang chủ</a><i class="fa fa-circle"></i>
 				</li>
 				<li class="active">
 					 Liên hệ
@@ -35,7 +35,7 @@
 											<span class="caption-subject font-blue-madison bold uppercase">Thông tin</span>
 										</div>
 										<div style="float: right;">
-											<a href="/admin/huong-dan-vien" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+											<a href="<c:url value="/admin/huong-dan-vien"/>" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 										</div>
 									</div>
 									<div class="portlet-body">
@@ -82,7 +82,7 @@
 											<span class="caption-subject font-blue-madison bold uppercase">Địa điểm</span>
 										</div>
 										<div style="float: right;">
-											<a href="/admin/huong-dan-vien" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+											<a href="<c:url value="/admin/huong-dan-vien"/>" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
 										</div>
 									</div>
 									<div class="portlet-body">

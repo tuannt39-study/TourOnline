@@ -39,8 +39,8 @@
     <table id="33" parent="2" name="role"/>
     <table id="34" parent="2" name="tour_guide"/>
     <table id="35" parent="2" name="tours"/>
-    <table id="36" parent="2" name="users"/>
-    <table id="37" parent="2" name="users_role"/>
+    <table id="36" parent="2" name="user"/>
+    <table id="37" parent="2" name="user_role"/>
     <column id="38" parent="29" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0</DataType>
