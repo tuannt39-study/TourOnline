@@ -7,28 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa01c085-c26d-434d-941d-a61daf9adc16" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error/403.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/error/404.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/classes/vn/hkd/tour/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/classes/vn/hkd/tour/config/WebSecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/classes/vn/hkd/tour/controller/admin/AccountController.class" afterPath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/classes/vn/hkd/tour/controller/admin/AccountController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/classes/vn/hkd/tour/controller/user/WebController.class" afterPath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/classes/vn/hkd/tour/controller/user/WebController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/vn/hkd/tour/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/vn/hkd/tour/config/WebSecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/vn/hkd/tour/controller/admin/AccountController.class" afterPath="$PROJECT_DIR$/target/classes/vn/hkd/tour/controller/admin/AccountController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/vn/hkd/tour/controller/user/WebController.class" afterPath="$PROJECT_DIR$/target/classes/vn/hkd/tour/controller/user/WebController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hkd/tour/config/WebSecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hkd/tour/config/WebSecurityConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hkd/tour/controller/admin/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hkd/tour/controller/admin/AccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/vn/hkd/tour/controller/user/WebController.java" afterPath="$PROJECT_DIR$/src/main/java/vn/hkd/tour/controller/user/WebController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/trangchu.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/trangchu.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/error.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/layout/error.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tiles.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/tiles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/widget/admin/headerAD.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/widget/admin/headerAD.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/widget/user/headerUS.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles/widget/user/headerUS.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/pages/user/trangchu.jsp" afterPath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/pages/user/trangchu.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/tiles/layout/error.jsp" afterPath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/tiles/layout/error.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/tiles/tiles.xml" afterPath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/tiles/tiles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/tiles/widget/admin/headerAD.jsp" afterPath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/tiles/widget/admin/headerAD.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/tiles/widget/user/headerUS.jsp" afterPath="$PROJECT_DIR$/target/Tour-Project/WEB-INF/tiles/widget/user/headerUS.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -204,10 +183,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -440,6 +418,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -706,11 +685,12 @@
       <workItem from="1501745897856" duration="4015000" />
       <workItem from="1501750733078" duration="2113000" />
       <workItem from="1501763202347" duration="4102000" />
+      <workItem from="1501780236100" duration="98000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13740000" />
+    <option name="totallyTimeSpent" value="13838000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="573" y="43" width="1332" height="998" extended-state="0" />
@@ -1102,9 +1082,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1120,9 +1098,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
