@@ -19,7 +19,6 @@ public class UserDAOImpl implements UserDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
-    @SuppressWarnings("unchecked")
     @Override
     public List<User> findAll() {
     	Session session = sessionFactory.getCurrentSession();
@@ -27,7 +26,7 @@ public class UserDAOImpl implements UserDAO {
     	String hql = "select distinct u " + 
     				 "from User u " +
     				 "left join fetch u.roles";
-    	
+
         return session.createQuery(hql).getResultList();
     }
 
@@ -39,7 +38,7 @@ public class UserDAOImpl implements UserDAO {
 					 "from User u " +
 					 "left join fetch u.roles " +
 			    	 "where u.id = :id";
-	
+
 	   try {
 	   	return (User) session.createQuery(hql)
 	   					.setParameter("id", id)
@@ -48,16 +47,16 @@ public class UserDAOImpl implements UserDAO {
 		   return null;
 	   }
     }
-    
+
     @Override
     public User findOne(String email) {
     	Session session = sessionFactory.getCurrentSession();
-    	
+
     	String hql = "select distinct u " +
     				 "from User u " +
     				 "left join fetch u.roles " +
     		    	 "where u.email = :email";
-    	
+
         try {
         	return (User) session.createQuery(hql)
         			.setParameter("email", email)
@@ -66,12 +65,12 @@ public class UserDAOImpl implements UserDAO {
         	return null;
         }
     }
-    
+
 	@Override
     public int count() {
     	Session session = sessionFactory.getCurrentSession();
-    	
-    	String hql = "select count(*) " + 
+
+    	String hql = "select count(*) " +
             	     "from User";
     	
         return ((Number) session.createQuery(hql).getSingleResult()).intValue();

@@ -27,13 +27,13 @@
 
                   <c:if test="${param.error != null}">
                     <div class="alert alert-danger">
-                      <p>Invalid email or password</p>
+                      <p>Sai email hoặc mật khẩu</p>
                     </div>
                   </c:if>
 
                   <c:if test="${param.logout != null}">
                     <div class="alert alert-success">
-                      <p>Logout successfully</p>
+                      <p>Đăng xuất thành công</p>
                     </div>
                   </c:if>
 
