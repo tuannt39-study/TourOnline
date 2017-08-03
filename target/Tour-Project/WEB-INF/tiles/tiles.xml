@@ -23,26 +23,20 @@
                 template="/WEB-INF/tiles/layout/error.jsp">
         <put-attribute name="head" value="/WEB-INF/tiles/widget/user/headUS.jsp" />
         <put-attribute name="header" value="/WEB-INF/tiles/widget/user/headerUS.jsp" />
-        <put-attribute name="error-color" value="" />
-        <put-attribute name="error-name" value="" />
-        <put-attribute name="error-message" value="" />
+        <put-attribute name="main" value="" />
         <put-attribute name="footer" value="/WEB-INF/tiles/widget/user/footerUS.jsp" />
     </definition>
 
     <!-- ====================== -->
 
-    <definition name="403" extends="errors">
+    <definition name="error403" extends="errors">
         <put-attribute name="title" value="Hackademics Hà Nội | Access denied" />
-        <put-attribute name="error-color" value="yellow" />
-        <put-attribute name="error-name" value="403" />
-        <put-attribute name="error-message" value="Oops! You are not authorized to access this page." />
+        <put-attribute name="main" value="/WEB-INF/pages/error/403.jsp" />
     </definition>
 
-    <definition name="404" extends="errors">
+    <definition name="error404" extends="errors">
         <put-attribute name="title" value="Hackademics Hà Nội | Page not found" />
-        <put-attribute name="error-color" value="red" />
-        <put-attribute name="error-name" value="404" />
-        <put-attribute name="error-message" value="Oops! Page not found" />
+        <put-attribute name="main" value="/WEB-INF/pages/error/404.jsp" />
     </definition>
 
     <!-- ====================== -->

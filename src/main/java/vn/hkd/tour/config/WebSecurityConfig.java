@@ -32,24 +32,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/").permitAll()
-                .antMatchers("/**").permitAll()
-                .antMatchers("/dang-ky").permitAll()
-                .antMatchers("/dang-nhap").permitAll()
-                .antMatchers("/admin/").permitAll()
-                .antMatchers("/admin/**").permitAll()
-                .and()
+                    .antMatchers("/user/change-profile").access("hasRole('MEMBER')")
+                    .antMatchers("/admin").access("hasRole('ADMIN')")
+                    .antMatchers("/admin/**").access("hasRole('ADMIN')")
+                    .and()
                 .formLogin()
-                .loginPage("/dang-nhap")
-                .usernameParameter("email")
-                .passwordParameter("password")
-                .defaultSuccessUrl("/")
-                .failureUrl("/dang-nhap?error")
-                .and()
+                    .loginPage("/dang-nhap")
+                    .usernameParameter("email")
+                    .passwordParameter("password")
+                    .defaultSuccessUrl("/")
+                    .failureUrl("/dang-nhap?error")
+                    .and()
                 .exceptionHandling()
-                .accessDeniedPage("/error/loi-403")
-                .and()
+                    .accessDeniedPage("/error/loi-403")
+                    .and()
                 .csrf()
-                .disable();
+                    .disable();
     }
 }

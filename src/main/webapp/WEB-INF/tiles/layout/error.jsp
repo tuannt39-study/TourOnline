@@ -5,15 +5,10 @@
     <title><tiles:getAsString name="title" /></title>
     <tiles:insertAttribute name="head" />
 </head>
-<body>
+<body class="corporate">
 
 <tiles:insertAttribute name="header" />
-<h2 style="color: <tiles:getAsString name="error-color"/>;">
-    <tiles:insertAttribute name="error-name" />
-</h2>
-<h3 style="color: <tiles:getAsString name="error-color"/>;">
-    <tiles:insertAttribute name="error-message" />
-</h3>
+<tiles:insertAttribute name="main" />
 <tiles:insertAttribute name="footer" />
 
 </body>

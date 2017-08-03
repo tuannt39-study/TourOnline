@@ -1,5 +1,34 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<!-- BEGIN SLIDER -->
+<div class="page-slider margin-bottom-40">
+    <div class="fullwidthbanner-container revolution-slider">
+        <div class="fullwidthabnner" data-nav="thumbs">
+            <ul id="revolutionul">
+                <!-- THE NEW SLIDE -->
+                <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400" data-thumb="<c:url value="/static/assets/frontend/pages/img/revolutionslider/thumbs/thumb2.jpg"/>">
+                    <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+                    <img src="<c:url value="/static/assets/frontend/pages/img/revolutionslider/bg1.jpg"/>" alt="">
+                </li>
+                <!-- THE FIRST SLIDE -->
+                <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400" data-thumb="<c:url value="/static/assets/frontend/pages/img/revolutionslider/thumbs/thumb2.jpg"/>">
+                    <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
+                    <img src="<c:url value="/static/assets/frontend/pages/img/revolutionslider/lady.jpg"/>" alt="">
+                </li>
+                <!-- THE SECOND SLIDE -->
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-delay="9400" data-thumb="<c:url value="/static/assets/frontend/pages/img/revolutionslider/thumbs/thumb2.jpg"/>">
+                    <img src="<c:url value="/static/assets/frontend/pages/img/revolutionslider/lady1.jpg"/>" alt="">
+                </li>
+                <!-- THE THIRD SLIDE -->
+                <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400" data-thumb="<c:url value="/static/assets/frontend/pages/img/revolutionslider/thumbs/thumb2.jpg"/>">
+                    <img src="<c:url value="/static/assets/frontend/pages/img/revolutionslider/lady3.jpg"/>" alt="">
+                </li>
+            </ul>
+            <div class="tp-bannertimer tp-bottom"></div>
+        </div>
+    </div>
+</div>
+<!-- END SLIDER -->
 <div class="main">
     <div class="container">
         <!-- BEGIN SALE PRODUCT & NEW ARRIVALS -->

@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <!-- BEGIN TOP BAR -->
 <div class="pre-header">
@@ -15,8 +16,16 @@
             <!-- BEGIN TOP BAR MENU -->
             <div class="col-md-6 col-sm-6 additional-nav">
                 <ul class="list-unstyled list-inline pull-right">
-                    <li><a href="<c:url value="/dang-nhap"/>">Đăng nhập</a></li>
-                    <li><a href="<c:url value="/dang-ky"/>">Đăng ký</a></li>
+                    <sec:authorize access="isAnonymous()">
+                        <li><a href="<c:url value="/dang-nhap"/>">Đăng nhập</a></li>
+                        <li><a href="<c:url value="/dang-ky"/>">Đăng ký</a></li>
+                    </sec:authorize>
+                    <sec:authorize access="isAuthenticated()">
+                        <sec:authentication var="principal" property="principal" />
+                        <c:set var="user" value="${principal.getUser()}" />
+                        <li><a href="<c:url value="/user/${user.id}" />">Chào, <strong>${user.name}</strong></a></li>
+                        <li><a href="<c:url value="/logout" />">Thoát</a></li>
+                    </sec:authorize>
                 </ul>
             </div>
             <!-- END TOP BAR MENU -->
@@ -90,6 +99,9 @@
                         Liên hệ
                     </a>
                 </li>
+                <sec:authorize access="hasAnyRole('ADMIN')">
+                    <li><a href="<c:url value="/admin" />" target="_blank">Quản lý Tour</a></li>
+                </sec:authorize>
                 <!-- BEGIN TOP SEARCH -->
                 <li class="menu-search">
                     <span class="sep"></span>
@@ -97,10 +109,10 @@
                     <div class="search-box">
                         <form action="#">
                             <div class="input-group">
-                                <input type="text" placeholder="Search" class="form-control" />
+                                <input type="text" placeholder="Tìm kiếm ..." class="form-control">
                                 <span class="input-group-btn">
-                        <button class="btn btn-primary" type="submit">Search</button>
-                        </span>
+                                    <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+                                </span>
                             </div>
                         </form>
                     </div>

@@ -36,7 +36,7 @@ public class AccountController {
     public String show(@PathVariable int id, Model model) {
         User user = userService.findOne(id);
         if (user == null) {
-            return "404";
+            return "error404";
         } else {
             model.addAttribute("user", user);
             return "account_idAD";
@@ -53,7 +53,7 @@ public class AccountController {
     public String edit(@PathVariable int id, Model model) {
         User user = userService.findOne(id);
         if (user == null) {
-            return "404";
+            return "error404";
         } else {
             model.addAttribute("user", user);
             return "account_editAD";
@@ -82,7 +82,7 @@ public class AccountController {
     public String delete(@PathVariable int id, RedirectAttributes redirect) {
         User user = userService.findOne(id);
         if (user == null) {
-            return "404";
+            return "error404";
         } else {
             if (user.getId() == 1) {
                 redirect.addFlashAttribute("error", "Can not delete this user!");

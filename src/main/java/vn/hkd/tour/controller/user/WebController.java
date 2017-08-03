@@ -70,7 +70,12 @@ public class WebController {
 
     @GetMapping("/error/loi-403")
     public String accessDenied(Model model) {
-        return "403";
+        return "error403";
+    }
+
+    @GetMapping("/error/loi-404")
+    public String notFound(Model model) {
+        return "error404";
     }
 
 }
