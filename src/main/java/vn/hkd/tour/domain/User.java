@@ -35,7 +35,7 @@ public class User implements Serializable {
 
     @NotEmpty
     @Length(min = 6)
-    @Column(name = "pwd")
+    @Column(name = "password")
     private String password;
 
     @Transient
@@ -44,7 +44,7 @@ public class User implements Serializable {
 
     @NotEmpty
     @Length(min = 10)
-    @Column(name = "phone_no", nullable = false)
+    @Column(name = "phone", nullable = false)
     private String phone;
 
     @Column(name = "gender")

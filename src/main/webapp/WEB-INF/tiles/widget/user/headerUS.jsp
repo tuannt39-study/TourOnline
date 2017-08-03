@@ -27,13 +27,13 @@
 <!-- BEGIN HEADER -->
 <div class="header">
     <div class="container">
-        <a class="site-logo" href="#"><img src="<c:url value="/static/assets/frontend/layout/img/logos/logo-kv.jpg"/>" alt="Metronic FrontEnd" /></a>
+        <a class="site-logo" href="<c:url value="/"/>"><img src="<c:url value="/static/assets/frontend/layout/img/logos/logo-kv.jpg"/>" alt="Metronic FrontEnd" /></a>
         <a href="#" class="mobi-toggler"><i class="fa fa-bars"></i></a>
         <!-- BEGIN NAVIGATION -->
         <div class="header-navigation pull-right font-transform-inherit">
             <ul>
                 <li >
-                    <a  href="#">
+                    <a  href="<c:url value="/"/>">
                         Trang chủ
                     </a>
                 </li>

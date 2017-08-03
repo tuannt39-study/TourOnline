@@ -25,12 +25,12 @@
             <div class="row margin-top-10">
                 <div class="col-md-12">
                     <!-- BEGIN PROFILE SIDEBAR -->
-                    <div class="profile-sidebar" style="width: 250px;">
+                    <div class="profile-sidebar" style="width: 250px; height: 303px">
                         <!-- PORTLET MAIN -->
                         <div class="portlet light profile-sidebar-portlet">
                             <!-- SIDEBAR USERPIC -->
                             <div class="profile-userpic">
-                                <img src="<c:url value="/static/assets/admin/pages/media/profile/profile_user.jpg"/>" class="img-responsive" alt=""/>
+                                <img src="<c:url value="/static/assets/admin/pages/media/profile/profile_user.jpg"/>" class="img-responsive" alt="" style="height: 125px; width: 125px"/>
                             </div>
                             <!-- END SIDEBAR USERPIC -->
                             <!-- SIDEBAR USER TITLE -->

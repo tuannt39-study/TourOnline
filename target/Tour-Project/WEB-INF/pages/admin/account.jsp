@@ -29,19 +29,37 @@
                                 <span class="caption-subject font-green-sharp bold uppercase">Tài khoản</span>
                             </div>
                         </div>
+                        <c:if test="${not empty success}">
+                            <div class="alert alert-success alert-dismissible">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                <i class="icon fa fa-check"></i> ${success}
+                            </div>
+                        </c:if>
+
+                        <c:if test="${not empty error}">
+                            <div class="alert alert-danger alert-dismissible">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                <i class="icon fa fa-exclamation-triangle"></i> ${error}
+                            </div>
+                        </c:if>
                         <div class="portlet-body">
                             <div class="table-toolbar">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="btn-group">
-                                            <button id="sample_editable_1_new" class="btn green">
-                                                Tạo mới <i class="fa fa-plus"></i>
-                                            </button>
+                                            <a href="<c:url value="/admin/tai-khoan/add"/>">
+                                                <button id="sample_editable_1_new" class="btn green"> Tạo mới <i class="fa fa-plus"></i> </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <table class="table table-striped table-bordered table-hover" id="sample_1">
+                            <c:choose>
+                                <c:when test="${empty users}">
+                                    <p>Chưa có tài khoản!</p>
+                                </c:when>
+                                <c:otherwise>
+                            <table class="table table-striped table-bordered table-hover" id="sample_5">
                                 <thead>
                                 <tr>
                                     <th>
@@ -49,9 +67,6 @@
                                     </th>
                                     <th>
                                         Email
-                                    </th>
-                                    <th>
-                                        Mật khẩu
                                     </th>
                                     <th>
                                         Họ tên
@@ -66,209 +81,48 @@
                                         Phân quyền
                                     </th>
                                     <th>
-                                        Trạng thái
+                                        Sửa
                                     </th>
                                     <th>
-                                        Sửa
+                                        Xóa
                                     </th>
                                 </tr>
                                 </thead>
                                 <tbody>
+                                <c:forEach items="${users}" var="user" >
                                 <tr class="odd gradeX">
-                                    <td>
-                                        1
+                                    <td align="center">${user.id}</td>
+                                    <td align="center">
+                                        <a href="mailto:${user.email}"> ${user.email} </a>
                                     </td>
-                                    <td>
-                                        <a href="mailto:tuannt@gmail.com">
-                                            tuannt@gmail.com </a>
+                                    <td align="center">
+                                        <a href="<c:url value="/admin/tai-khoan/${user.id}"/>"> ${user.name} </a>
                                     </td>
-                                    <td>
-                                        1111
+                                    <td align="center">${user.phone}</td>
+                                    <td align="center">${user.address}</td>
+
+                                    <td align="center">
+                                    <c:choose>
+                                        <c:when test="${user.admin}">
+                                            <span class="label label-danger">Quản trị viên</span>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <span class="label label-info">Người dùng</span>
+                                        </c:otherwise>
+                                    </c:choose>
                                     </td>
-                                    <td>
-                                        <a href="<c:url value="/admin/tai-khoan"/>">
-                                            Nguyễn Thế Tuân </a>
+                                    <td align="center">
+                                        <a href="<c:url value="/admin/tai-khoan/${user.id}/edit"/>" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
                                     </td>
-                                    <td>
-                                        0963340577
-                                    </td>
-                                    <td>
-                                        Hà Nội
-                                    </td>
-                                    <td>
-									<span class="label label-info">
-									Người dùng </span>
-                                    </td>
-                                    <td>
-									<span class="label label-success">
-									Hoạt động </span>
-                                    </td>
-                                    <td>
-                                        <a href="<c:url value="/admin/tai-khoan"/>" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+                                    <td align="center">
+                                        <a href="<c:url value="/admin/tai-khoan/${user.id}/delete"/>" class="btn btn-icon-only btn-circle red"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        2
-                                    </td>
-                                    <td>
-                                        <a href="mailto:anhvt@gmail.com">
-                                            anhvt@gmail.com </a>
-                                    </td>
-                                    <td>
-                                        2222
-                                    </td>
-                                    <td>
-                                        Vũ Tuấn Anh
-                                    </td>
-                                    <td>
-                                        0963340577
-                                    </td>
-                                    <td>
-                                        Hà Nội
-                                    </td>
-                                    <td>
-									<span class="label label-primary">
-									Quản lý </span>
-                                    </td>
-                                    <td>
-									<span class="label label-default">
-									Khóa </span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        3
-                                    </td>
-                                    <td>
-                                        <a href="mailto:viethq@yahoo.com">
-                                            viethq@yahoo.com </a>
-                                    </td>
-                                    <td>
-                                        3333
-                                    </td>
-                                    <td>
-                                        Hà Quốc Việt
-                                    </td>
-                                    <td>
-                                        0963340577
-                                    </td>
-                                    <td>
-                                        Hà Nội
-                                    </td>
-                                    <td>
-									<span class="label label-danger">
-									Admin </span>
-                                    </td>
-                                    <td>
-									<span class="label label-success">
-									Hoạt động </span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        4
-                                    </td>
-                                    <td>
-                                        <a href="mailto:htucmt@gmail.com">
-                                            thuctm@gmail.com </a>
-                                    </td>
-                                    <td>
-                                        4444
-                                    </td>
-                                    <td>
-                                        Trương Minh Thức
-                                    </td>
-                                    <td>
-                                        0963340577
-                                    </td>
-                                    <td>
-                                        Hà Nội
-                                    </td>
-                                    <td>
-									<span class="label label-info">
-									Người dùng </span>
-                                    </td>
-                                    <td>
-									<span class="label label-default">
-									Khóa </span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        5
-                                    </td>
-                                    <td>
-                                        <a href="mailto:tuannv@gmail.com">
-                                            tuannv@gmail.com </a>
-                                    </td>
-                                    <td>
-                                        5555
-                                    </td>
-                                    <td>
-                                        Nguyễn Văn Tuấn
-                                    </td>
-                                    <td>
-                                        0963340577
-                                    </td>
-                                    <td>
-                                        Hà Nội
-                                    </td>
-                                    <td>
-									<span class="label label-info">
-									Người dùng </span>
-                                    </td>
-                                    <td>
-									<span class="label label-success">
-									Hoạt động </span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        6
-                                    </td>
-                                    <td>
-                                        <a href="mailto:hapn@gmail.com">
-                                            hapn@gmail.com </a>
-                                    </td>
-                                    <td>
-                                        6666
-                                    </td>
-                                    <td>
-                                        Phạm Ngọc Hà
-                                    </td>
-                                    <td>
-                                        0963340577
-                                    </td>
-                                    <td>
-                                        Hà Nội
-                                    </td>
-                                    <td>
-									<span class="label label-info">
-									Người dùng </span>
-                                    </td>
-                                    <td>
-									<span class="label label-success">
-									Hoạt động </span>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
-                                    </td>
-                                </tr>
+                                </c:forEach>
                                 </tbody>
                             </table>
+                                </c:otherwise>
+                            </c:choose>
                         </div>
                     </div>
                     <!-- END EXAMPLE TABLE PORTLET-->
