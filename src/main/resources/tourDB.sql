@@ -37,13 +37,13 @@ CREATE TABLE `book` (
   `no_2-5` int(11) DEFAULT NULL,
   `no_<2` int(11) DEFAULT NULL,
   `approved` tinyint(1) DEFAULT NULL,
-  `note` varchar(50) DEFAULT NULL,
-  `customer_name` varchar(50) NOT NULL,
+  `note` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `customer_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `dob` date NOT NULL,
   `phone_no` int(20) NOT NULL,
-  `gender` char(4) NOT NULL,
-  `address` varchar(255) DEFAULT NULL,
-  `email` varchar(50) NOT NULL,
+  `gender` char(4) COLLATE utf8_unicode_ci NOT NULL,
+  `address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -67,8 +67,8 @@ DROP TABLE IF EXISTS `images`;
 CREATE TABLE `images` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `tour_id` int(11) NOT NULL,
-  `script` varchar(255) NOT NULL,
-  `url` varchar(255) NOT NULL,
+  `script` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -92,10 +92,10 @@ DROP TABLE IF EXISTS `prices`;
 CREATE TABLE `prices` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `tour_id` int(11) NOT NULL,
-  `adult` varchar(32) NOT NULL,
-  `5-12` varchar(32) NOT NULL,
-  `2-5` varchar(32) NOT NULL,
-  `<2` varchar(32) NOT NULL,
+  `adult` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+  `5-12` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+  `2-5` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+  `<2` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -118,14 +118,14 @@ DROP TABLE IF EXISTS `product`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `product` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `approved` varchar(255) NOT NULL,
-  `descript` varchar(5000) NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `length` varchar(255) NOT NULL,
-  `name` varchar(500) NOT NULL,
-  `origin` varchar(255) NOT NULL,
-  `promotion` varchar(255) NOT NULL,
-  `addition_service` varchar(255) NOT NULL,
+  `approved` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `descript` varchar(5000) COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `length` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `origin` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `promotion` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `addition_service` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -148,7 +148,7 @@ DROP TABLE IF EXISTS `role`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `role` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) DEFAULT NULL,
+  `name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -172,11 +172,11 @@ DROP TABLE IF EXISTS `tour_guide`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tour_guide` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `gender` char(4) NOT NULL,
+  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `gender` char(4) COLLATE utf8_unicode_ci NOT NULL,
   `phone` int(11) NOT NULL,
-  `address` varchar(255) DEFAULT NULL,
-  `script` varchar(255) DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `script` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -199,16 +199,16 @@ DROP TABLE IF EXISTS `tours`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tours` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(200) NOT NULL,
-  `length` varchar(50) NOT NULL,
-  `origin` varchar(50) NOT NULL,
-  `descript` text NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `addition_service` varchar(255) DEFAULT NULL,
+  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `length` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `origin` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `descript` text COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `addition_service` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `approved` int(11) NOT NULL,
   `promotion` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -229,14 +229,14 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  `pwd` text NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `phone_no` int(12) NOT NULL,
-  `gender` char(4) NOT NULL,
-  `address` varchar(255) NOT NULL,
+  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `password` text COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` int(12) NOT NULL,
+  `gender` char(4) COLLATE utf8_unicode_ci NOT NULL,
+  `address` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -245,6 +245,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'Nguyễn Thế Tuân','$2a$10$pMKNaJhUKJoeWLFn.nNs0.WQbRnpKZzI3Y8JIxenJ6TCu4Fe.6UGS','tuan@gmail.com',964839684,'Nam','Hà Nội'),(2,'Nguyễn Đình Thạo','$2a$10$JuqAQGgJ1mhdEDc/y.ccROGt1AR8udYwWcb/hF7PmKudIWzQLXYZ.','thao@gmail.com',956385632,'Nữ','Hà Nội'),(3,'Nguyễn Hiến','$2a$10$fHshDLkjqxk1ZTTQlK62bOKwUhSbyHNAv0apyX9ul5xg5lKvLT7R2','hien@gmail.com',963859363,'Nam','Hà Nội');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -268,6 +269,7 @@ CREATE TABLE `user_role` (
 
 LOCK TABLES `user_role` WRITE;
 /*!40000 ALTER TABLE `user_role` DISABLE KEYS */;
+INSERT INTO `user_role` VALUES (1,1),(1,2),(2,2),(3,2);
 /*!40000 ALTER TABLE `user_role` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -280,4 +282,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-02 10:08:26
+-- Dump completed on 2017-08-03 20:44:52
