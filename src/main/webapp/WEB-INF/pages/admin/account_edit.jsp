@@ -1,4 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <div class="page-container">
     <div class="page-head">
@@ -18,14 +20,21 @@
                     <a href="<c:url value="/admin/tai-khoan"/>">Tài khoản</a><i class="fa fa-circle"></i>
                 </li>
                 <li class="active">
-                    Nguyễn Thế Tuân
+                    <c:choose>
+                        <c:when test="${user.id == 0}">
+                            Thêm tài khoản
+                        </c:when>
+                        <c:otherwise>
+                            ${user.name}
+                        </c:otherwise>
+                    </c:choose>
                 </li>
             </ul>
 
             <div class="row margin-top-10">
                 <div class="col-md-12">
                     <!-- BEGIN PROFILE SIDEBAR -->
-                    <div class="profile-sidebar" style="width: 250px; height: 303px">
+                    <div class="profile-sidebar __web-inspector-hide-shortcut__" style="width: 250px; height: 303px">
                         <!-- PORTLET MAIN -->
                         <div class="portlet light profile-sidebar-portlet">
                             <!-- SIDEBAR USERPIC -->
@@ -36,11 +45,16 @@
                             <!-- SIDEBAR USER TITLE -->
                             <div class="profile-usertitle">
                                 <div class="profile-usertitle-name">
-                                    Nguyễn Thế Tuân
+                                    ${user.name}
                                 </div>
-                                <div class="profile-usertitle-job">
-                                    Người dùng
-                                </div>
+                                <c:choose>
+                                    <c:when test="${user.admin}">
+                                        <div class="profile-usertitle-job">Quản trị viên</div>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <div class="profile-usertitle-job">Người dùng</div>
+                                    </c:otherwise>
+                                </c:choose>
                             </div>
                             <!-- END SIDEBAR USER TITLE -->
                             <!-- SIDEBAR MENU -->
@@ -65,74 +79,118 @@
                                     <div class="portlet-body">
                                         <div class="tab-content">
                                             <div class="tab-pane active">
-                                                <form role="form" action="#" class="form-horizontal">
+                                                <c:url value="/admin/tai-khoan/save" var="action" />
+                                                <form:form action="${action}" method="POST" modelAttribute="user" class="form-horizontal">
                                                     <div class="form-body">
                                                         <div class="form-group">
                                                             <label class="col-md-3 control-label">Họ tên</label>
                                                             <div class="col-md-5">
-                                                                <input type="text" class="form-control input-circle" placeholder="Họ tên" />
+                                                                <form:input path="name" cssClass="form-control input-circle" />
+                                                                <c:set var="nameErrors"><form:errors path="name"/></c:set>
+                                                                <c:if test="${not empty nameErrors}">
+                                                                    <div class="field-error" style="color: red;">
+                                                                        <i class="fa fa-exclamation-circle"></i>
+                                                                        <form:errors path="name" delimiter="<br><i class='fa fa-exclamation-circle'></i> " />
+                                                                    </div>
+                                                                </c:if>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="col-md-3 control-label">Giới tính</label>
                                                             <div class="col-md-5">
-                                                                <input type="text" class="form-control input-circle" placeholder="Giới tính"/>
+                                                                <form:input path="gender" cssClass="form-control input-circle" />
+                                                                <c:set var="genderErrors"><form:errors path="gender"/></c:set>
+                                                                <c:if test="${not empty genderErrors}">
+                                                                    <div class="field-error" style="color: red;">
+                                                                        <i class="fa fa-exclamation-circle"></i>
+                                                                        <form:errors path="gender" delimiter="<br><i class='fa fa-exclamation-circle'></i> " />
+                                                                    </div>
+                                                                </c:if>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="col-md-3 control-label">Email</label>
                                                             <div class="col-md-5">
-                                                                <input type="text" class="form-control input-circle" placeholder="Email"/>
+                                                                <form:input path="email" cssClass="form-control input-circle" />
+                                                                <c:set var="emailErrors"><form:errors path="email"/></c:set>
+                                                                <c:if test="${not empty emailErrors}">
+                                                                    <div class="field-error" style="color: red;">
+                                                                        <i class="fa fa-exclamation-circle"></i>
+                                                                        <form:errors path="email" delimiter="<br><i class='fa fa-exclamation-circle'></i> " />
+                                                                    </div>
+                                                                </c:if>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="col-md-3 control-label">Mật khẩu</label>
                                                             <div class="col-md-5">
-                                                                <input type="text" class="form-control input-circle" placeholder="Mật khẩu"/>
+                                                                <form:input path="password" cssClass="form-control input-circle" type="password"/>
+                                                                <c:set var="passwordErrors"><form:errors path="password"/></c:set>
+                                                                <c:if test="${not empty passwordErrors}">
+                                                                    <div class="field-error" style="color: red;">
+                                                                        <i class="fa fa-exclamation-circle"></i>
+                                                                        <form:errors path="password" delimiter="<br><i class='fa fa-exclamation-circle'></i> " />
+                                                                    </div>
+                                                                </c:if>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-3 control-label">Xác nhận mật khẩu</label>
+                                                            <div class="col-md-5">
+                                                                <form:input path="confirmPassword" cssClass="form-control input-circle" type="password"/>
+                                                                <c:set var="confirmPasswordErrors"><form:errors path="confirmPassword"/></c:set>
+                                                                <c:if test="${not empty confirmPasswordErrors}">
+                                                                    <div class="field-error" style="color: red;">
+                                                                        <i class="fa fa-exclamation-circle"></i>
+                                                                        <form:errors path="confirmPassword" delimiter="<br><i class='fa fa-exclamation-circle'></i> " />
+                                                                    </div>
+                                                                </c:if>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="col-md-3 control-label">Số điện thoại</label>
                                                             <div class="col-md-5">
-                                                                <input type="text" class="form-control input-circle" placeholder="Số điện thoại"/>
+                                                                <form:input path="phone" cssClass="form-control input-circle" />
+                                                                <c:set var="phoneErrors"><form:errors path="phone"/></c:set>
+                                                                <c:if test="${not empty phoneErrors}">
+                                                                    <div class="field-error" style="color: red;">
+                                                                        <i class="fa fa-exclamation-circle"></i>
+                                                                        <form:errors path="phone" delimiter="<br><i class='fa fa-exclamation-circle'></i> " />
+                                                                    </div>
+                                                                </c:if>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="col-md-3 control-label">Địa chỉ</label>
                                                             <div class="col-md-5">
-                                                                <input type="text" class="form-control input-circle" placeholder="Địa chỉ"/>
+                                                                <form:input path="address" cssClass="form-control input-circle" />
+                                                                <c:set var="addressErrors"><form:errors path="address"/></c:set>
+                                                                <c:if test="${not empty addressErrors}">
+                                                                    <div class="field-error" style="color: red;">
+                                                                        <i class="fa fa-exclamation-circle"></i>
+                                                                        <form:errors path="address" delimiter="<br><i class='fa fa-exclamation-circle'></i> " />
+                                                                    </div>
+                                                                </c:if>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="col-md-3 control-label">Phân quyền</label>
                                                             <div class="col-md-4">
-                                                                <select class="form-control input-circle">
-                                                                    <option value="">Người dùng</option>
-                                                                    <option value="">Quản lý</option>
-                                                                    <option value="">Admin</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="col-md-3 control-label">Trạng thái</label>
-                                                            <div class="col-md-4">
-                                                                <select class="form-control input-circle">
-                                                                    <option value="">Hoạt động</option>
-                                                                    <option value="">Chờ</option>
-                                                                    <option value="">Ngừng</option>
+                                                                <select name="role" class="form-control input-circle">
+                                                                    <option value="admin" ${user.admin eq true ? 'selected' : ''}>Quản trị viên</option>
+                                                                    <option value="member" ${user.admin eq false ? 'selected' : ''}>Người dùng</option>
                                                                 </select>
                                                             </div>
                                                         </div>
                                                         <div class="form-actions">
                                                             <div class="row">
                                                                 <div class="col-md-offset-3 col-md-9">
-                                                                    <button formaction="./account.html" class="btn btn-circle blue">Xác nhận</button>
-                                                                    <button class="btn btn-circle default">Hủy</button>
+                                                                    <button class="btn btn-circle blue">Xác nhận</button>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </form>
+                                                </form:form>
                                             </div>
                                         </div>
                                     </div>

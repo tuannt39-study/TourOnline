@@ -18,10 +18,9 @@
                     <a href="<c:url value="/admin/tai-khoan"/>">Tài khoản</a><i class="fa fa-circle"></i>
                 </li>
                 <li class="active">
-                    Nguyễn Thế Tuân
+                    ${user.name}
                 </li>
             </ul>
-
 
             <div class="row margin-top-10">
                 <div class="col-md-12">
@@ -37,11 +36,16 @@
                             <!-- SIDEBAR USER TITLE -->
                             <div class="profile-usertitle">
                                 <div class="profile-usertitle-name">
-                                    Nguyễn Thế Tuân
+                                    ${user.name}
                                 </div>
-                                <div class="profile-usertitle-job">
-                                    Người dùng
-                                </div>
+                                <c:choose>
+                                    <c:when test="${user.admin}">
+                                        <div class="profile-usertitle-job">Quản trị viên</div>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <div class="profile-usertitle-job">Người dùng</div>
+                                    </c:otherwise>
+                                </c:choose>
                             </div>
                             <!-- END SIDEBAR USER TITLE -->
                             <!-- SIDEBAR MENU -->
@@ -63,7 +67,7 @@
                                             <span class="caption-subject font-blue-madison bold uppercase">Thông tin</span>
                                         </div>
                                         <div style="float: right;">
-                                            <a href="#" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
+                                            <a href="<c:url value="/admin/tai-khoan/${user.id}/edit"/>" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
                                         </div>
                                     </div>
                                     <div class="portlet-body">
@@ -74,19 +78,19 @@
                                                         <div class="form-group">
                                                             <label class="col-md-3 control-label">Email</label>
                                                             <div class="col-md-4">
-                                                                <span class="form-control-static">tuannt@gmail.com </span>
+                                                                <span class="form-control-static">${user.email}</span>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="col-md-3 control-label">Số điện thoại</label>
                                                             <div class="col-md-4">
-                                                                <span class="form-control-static">0963340577 </span>
+                                                                <span class="form-control-static">${user.phone}</span>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label class="col-md-3 control-label">Địa chỉ</label>
                                                             <div class="col-md-4">
-                                                                <span class="form-control-static">Hà Nội </span>
+                                                                <span class="form-control-static">${user.address}</span>
                                                             </div>
                                                         </div>
                                                         <div class="form-group">
@@ -94,12 +98,6 @@
                                                             <div class="col-md-4">
                                                                 <a href="<c:url value="/admin/tour"/>" class="form-control-static">11</a> (1 lần) -
                                                                 <a href="<c:url value="/admin/tour"/>" class="form-control-static">12</a> (2 lần)
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label class="col-md-3 control-label">Trạng thái</label>
-                                                            <div class="col-md-4">
-                                                                <span class="form-control-static">Hoạt động </span>
                                                             </div>
                                                         </div>
                                                     </div>

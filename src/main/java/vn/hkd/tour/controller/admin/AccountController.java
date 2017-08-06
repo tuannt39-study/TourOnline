@@ -49,7 +49,7 @@ public class AccountController {
         return "account_editAD";
     }
 
-    @GetMapping("/admin/user/{id}/edit")
+    @GetMapping("/admin/tai-khoan/{id}/edit")
     public String edit(@PathVariable int id, Model model) {
         User user = userService.findOne(id);
         if (user == null) {
@@ -74,7 +74,7 @@ public class AccountController {
             userService.update(user, role);
         }
 
-        redirect.addFlashAttribute("success", "Saved user " + user.getName() + " successfully!");
+        redirect.addFlashAttribute("success", "Lưu tài khoản " + user.getName() + " thành công!");
         return "redirect:/admin/tai-khoan";
     }
 
@@ -85,10 +85,10 @@ public class AccountController {
             return "error404";
         } else {
             if (user.getId() == 1) {
-                redirect.addFlashAttribute("error", "Can not delete this user!");
+                redirect.addFlashAttribute("error", "Không thể xóa tài khoản này!");
             } else {
                 userService.delete(user);
-                redirect.addFlashAttribute("success", "Delete user " + user.getName() + " successfully!");
+                redirect.addFlashAttribute("success", "Xóa tài khoản " + user.getName() + " thành công!");
             }
             return "redirect:/admin/tai-khoan";
         }
