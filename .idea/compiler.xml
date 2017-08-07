@@ -9,7 +9,7 @@
         <module name="Tour-Project" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel>
       <module name="Tour-Project" target="1.8" />
     </bytecodeTargetLevel>
   </component>

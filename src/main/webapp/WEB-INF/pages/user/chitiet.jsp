@@ -1,5 +1,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=1419049848184806";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="main">
     <div class="container">
         <ul class="breadcrumb">
@@ -97,24 +107,8 @@
 
 
                             <div class="post-comment padding-top-40">
-                                <h3>Bình luận</h3>
-                                <form role="form">
-                                    <div class="form-group">
-                                        <label>Tên</label>
-                                        <input class="form-control" type="text"/>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Email <span class="color-red">*</span></label>
-                                        <input class="form-control" type="text"/>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Viết bình luận</label>
-                                        <textarea class="form-control" rows="8"></textarea>
-                                    </div>
-                                    <p><button class="btn btn-primary" type="submit">Đăng</button></p>
-                                </form>
+                                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                                <div class="fb-comments" data-href="http://localhost:8080" data-numposts="10"></div>
                             </div>
 
                         </div>
