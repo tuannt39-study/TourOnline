@@ -115,7 +115,7 @@
                                         <a href="<c:url value="/admin/tai-khoan/${user.id}/edit"/>" title="Sửa tài khoản" class="btn btn-icon-only btn-circle yellow"><i class="fa fa-edit"></i></a>
                                     </td>
                                     <td align="center">
-                                        <a href="<c:url value="/admin/tai-khoan/${user.id}/delete"/>" title="Xóa tài khoản" class="btn btn-icon-only btn-circle red"><i class="fa fa-times"></i></a>
+                                        <a href="<c:url value="/admin/tai-khoan/${user.id}/delete"/>" title="Xóa tài khoản" class="btn btn-icon-only btn-circle red" onclick="return confirmDelete('user');"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
                                 </c:forEach>
