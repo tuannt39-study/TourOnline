@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="admin"
+                template="/WEB-INF/tiles/layout/admin.jsp">
+        <put-attribute name="head" value="/WEB-INF/tiles/widget/admin/headAD.jsp" />
+        <put-attribute name="header" value="/WEB-INF/tiles/widget/admin/headerAD.jsp" />
+        <put-attribute name="main" value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/widget/admin/footerAD.jsp" />
+    </definition>
+
+    <definition name="users"
+                template="/WEB-INF/tiles/layout/user.jsp">
+        <put-attribute name="head" value="/WEB-INF/tiles/widget/user/headUS.jsp" />
+        <put-attribute name="header" value="/WEB-INF/tiles/widget/user/headerUS.jsp" />
+        <put-attribute name="main" value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/widget/user/footerUS.jsp" />
+    </definition>
+
+    <definition name="errors"
+                template="/WEB-INF/tiles/layout/error.jsp">
+        <put-attribute name="head" value="/WEB-INF/tiles/widget/user/headUS.jsp" />
+        <put-attribute name="header" value="/WEB-INF/tiles/widget/user/headerUS.jsp" />
+        <put-attribute name="main" value="" />
+        <put-attribute name="footer" value="/WEB-INF/tiles/widget/user/footerUS.jsp" />
+    </definition>
+
+    <!-- ====================== -->
+
+    <definition name="error403" extends="errors">
+        <put-attribute name="title" value="Hackademics Hà Nội | Access denied" />
+        <put-attribute name="main" value="/WEB-INF/pages/error/403.jsp" />
+    </definition>
+
+    <definition name="error404" extends="errors">
+        <put-attribute name="title" value="Hackademics Hà Nội | Page not found" />
+        <put-attribute name="main" value="/WEB-INF/pages/error/404.jsp" />
+    </definition>
+
+    <!-- ====================== -->
+
+    <definition name="homeUS" extends="users">
+        <put-attribute name="title" value="Hackademics Hà Nội | Trang chủ" />
+        <put-attribute name="main" value="/WEB-INF/pages/user/trangchu.jsp" />
+    </definition>
+
+    <definition name="chitietUS" extends="users">
+        <put-attribute name="title" value="Hackademics Hà Nội | Chi tiết Tour" />
+        <put-attribute name="main" value="/WEB-INF/pages/user/chitiet.jsp" />
+    </definition>
+
+    <definition name="dangkyUS" extends="users">
+        <put-attribute name="title" value="Hackademics Hà Nội | Đăng ký" />
+        <put-attribute name="main" value="/WEB-INF/pages/user/dangky.jsp" />
+    </definition>
+
+    <definition name="dangnhapUS" extends="users">
+        <put-attribute name="title" value="Hackademics Hà Nội | Đăng nhập" />
+        <put-attribute name="main" value="/WEB-INF/pages/user/dangnhap.jsp" />
+    </definition>
+
+    <definition name="dattourUS" extends="users">
+        <put-attribute name="title" value="Hackademics Hà Nội | Đặt Tour" />
+        <put-attribute name="main" value="/WEB-INF/pages/user/dattour.jsp" />
+    </definition>
+
+    <definition name="lienheUS" extends="users">
+        <put-attribute name="title" value="Hackademics Hà Nội | Liên hệ" />
+        <put-attribute name="main" value="/WEB-INF/pages/user/lienhe.jsp" />
+    </definition>
+
+    <!-- ====================== -->
+
+    <definition name="dashboardAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Admin" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/home.jsp" />
+    </definition>
+
+    <definition name="accountAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Account Manager" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/account.jsp" />
+    </definition>
+
+    <definition name="account_editAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Account Edit" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/account_edit.jsp" />
+    </definition>
+
+    <definition name="account_idAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Account Id" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/account_id.jsp" />
+    </definition>
+
+    <definition name="bookingAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Booking Manager" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/booking.jsp" />
+    </definition>
+
+    <definition name="booking_editAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Booking Edit" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/booking_edit.jsp" />
+    </definition>
+
+    <definition name="contactAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Contact Manager" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/contact.jsp" />
+    </definition>
+
+    <definition name="hdvAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Guide Manager" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/hdv.jsp" />
+    </definition>
+
+    <definition name="hdv_editAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Guide Edit" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/hdv_edit.jsp" />
+    </definition>
+
+    <definition name="hdv_idAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Guide Id" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/hdv_id.jsp" />
+    </definition>
+
+    <definition name="tourAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Tour Manager" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/tour.jsp" />
+    </definition>
+
+    <definition name="tour_editAD" extends="admin">
+        <put-attribute name="title" value="Hackademics Hà Nội | Tour Edit" />
+        <put-attribute name="main" value="/WEB-INF/pages/admin/tour_edit.jsp" />
+    </definition>
+
+</tiles-definitions>
